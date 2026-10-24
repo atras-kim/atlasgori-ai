@@ -87,4 +87,4 @@ Jongmyoung Kim supplies trade/procurement workflow expertise and validation. Cod
 
 ## Licence and publication status
 
-No open-source licence has been selected. Public visibility does not itself grant an open-source licence. This folder is ready for owner review before publishing to the proposed `atlasgori-ai` repository. No repository URL or final submission exists yet.
+No open-source licence has been selected. Public visibility does not itself grant an open-source licence. The source is published at https://github.com/atras-kim/atlasgori-ai with owner approval. Final hackathon submission is still pending.
