@@ -1,0 +1,11 @@
+.runtime/
+.venv/
+__pycache__/
+*.pyc
+.env
+.env.*
+config/zetaris.env.local
+output/meterless-demo/*.json
+
+!output/meterless-demo/pdf-extracted.json
+!output/meterless-demo/live-test-receipt.json
