@@ -1,0 +1,35 @@
+[
+  {
+    "file": "Demo_Supplier_A_Quotation.pdf",
+    "path": "output/pdf/Demo_Supplier_A_Quotation.pdf",
+    "sha256": "153d08ad7714d09774f9322c4ddb755cc44fee3918f40eb53c0a24699fd8f194",
+    "pages": [
+      {
+        "page": 1,
+        "text": "AtlasGori AI | Synthetic quotation dataset | 23 October 2026\n1\nATLASGORI AI / HACKATHON SAMPLE\n Demo Supplier A\nQUOTATION DEMO-A-20261023\nFICTIONAL DATA - FOR DEMO AND TESTING ONLY. Not a commercial offer.\nBuyer\nAtlasGori Demo Buyer\nIssue date\n23 October 2026\nProduct\nVirgin PP homopolymer, injection molding grade\nQuoted quantity\n20 MT (20,000 kg)\nPackaging\n25 kg bags\nDestination\nBusan, Republic of Korea\nQuotation validity\nThrough 26 October 2026\nGrade\nDEMO-PP-A12\nMFR\n12 g/10 min at 230 C / 2.16 kg\nMinimum order\n20 MT\nUnit price\nUSD 980 / MT\nGoods amount\nUSD 19,600\nTrade terms\nFOB Laem Chabang, Incoterms 2020\nOcean freight\nExcluded\nCargo insurance\nExcluded\nShipment\n28 days after receipt of deposit\nPayment\n30% deposit; 70% against copy of bill of lading\nDocuments\nTDS, shipment-lot COA and SDS provided\nBag count\n800 bags\nSeparate demo logistics assumptions\nOcean freight: USD 1,200 per shipment. Cargo insurance: USD 80 per shipment. These are fictional comparison\nassumptions, not supplier-confirmed charges.\nComparison scope excludes import duties, VAT, customs clearance, destination local charges and inland transport. MT =\nmetric tonne (1,000 kg). All supplier names, grades, prices and terms are fictional.\n"
+      }
+    ]
+  },
+  {
+    "file": "Demo_Supplier_B_Quotation.pdf",
+    "path": "output/pdf/Demo_Supplier_B_Quotation.pdf",
+    "sha256": "1a07d3076b336981e3ea40dcc04b01f1c82b7db22f7189e65f690699c4c957c7",
+    "pages": [
+      {
+        "page": 1,
+        "text": "AtlasGori AI | Synthetic quotation dataset | 23 October 2026\n1\nATLASGORI AI / HACKATHON SAMPLE\n Demo Supplier B\nQUOTATION DEMO-B-20261023\nFICTIONAL DATA - FOR DEMO AND TESTING ONLY. Not a commercial offer.\nBuyer\nAtlasGori Demo Buyer\nIssue date\n23 October 2026\nProduct\nVirgin PP homopolymer, injection molding grade\nQuoted quantity\n20 MT (20,000 kg)\nPackaging\n25 kg bags\nDestination\nBusan, Republic of Korea\nQuotation validity\nThrough 27 October 2026\nGrade\nDEMO-PP-B12\nMFR\n12 g/10 min at 230 C / 2.16 kg\nMinimum order\n20 MT\nUnit price\nUSD 1,055 / MT\nQuotation total\nUSD 21,100\nTrade terms\nCIF Busan, Incoterms 2020\nOcean freight\nIncluded\nCargo insurance\nIncluded; insured amount 110% of contract value; ICC(C)\nShipment\n14 days after receipt of deposit\nPayment\n20% deposit; 80% against copy of bill of lading\nDocuments\nTDS, shipment-lot COA and SDS provided\nBag count\n800 bags\nComparison scope excludes import duties, VAT, customs clearance, destination local charges and inland transport. MT =\nmetric tonne (1,000 kg). All supplier names, grades, prices and terms are fictional.\n"
+      }
+    ]
+  },
+  {
+    "file": "Demo_Supplier_C_Quotation.pdf",
+    "path": "output/pdf/Demo_Supplier_C_Quotation.pdf",
+    "sha256": "025c9eb6042e8af4fece68e87c57d3cf017d2394cf48c76ebbe8f4185e1315a1",
+    "pages": [
+      {
+        "page": 1,
+        "text": "AtlasGori AI | Synthetic quotation dataset | 23 October 2026\n1\nATLASGORI AI / HACKATHON SAMPLE\n Demo Supplier C\nQUOTATION DEMO-C-20261023\nFICTIONAL DATA - FOR DEMO AND TESTING ONLY. Not a commercial offer.\nBuyer\nAtlasGori Demo Buyer\nIssue date\n23 October 2026\nProduct\nVirgin PP homopolymer, injection molding grade\nQuoted quantity\n20 MT (20,000 kg)\nPackaging\n25 kg bags\nDestination\nBusan, Republic of Korea\nQuotation validity\nNot stated\nGrade\nDEMO-PP-C12\nMFR\n12 g/10 min; test conditions not stated\nMinimum order\n25 MT\nUnit price\nUSD 1,020 / MT\nQuotation total\nUSD 20,400, calculated for 20 MT\nTrade terms\nCIF Busan, Incoterms 2020\nOcean freight\nIncluded\nCargo insurance\nBuyer to arrange separately\nShipment\n10 days after contract; payment trigger not stated\nPayment\n100% payment before shipment\nDocuments\nTDS provided; COA considered on request; SDS not stated\nComparison scope excludes import duties, VAT, customs clearance, destination local charges and inland transport. MT =\nmetric tonne (1,000 kg). All supplier names, grades, prices and terms are fictional.\n"
+      }
+    ]
+  }
+]

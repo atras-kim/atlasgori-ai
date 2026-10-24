@@ -1,0 +1,723 @@
+{
+  "http_security": {
+    "invalid_token": true,
+    "cross_origin": true,
+    "empty_files": true,
+    "invalid_criteria": true
+  },
+  "runs": [
+    {
+      "status": "done",
+      "stage": "분석·검증 완료",
+      "progress": 100,
+      "started": 1792741092.5597742,
+      "result": {
+        "run_id": "f5e08d445f284c15a8f35e8d72b65663",
+        "created_kst": "2026-10-23 16:40:19",
+        "criteria": {
+          "quantity_mt": 20,
+          "shipment_days_max": 21,
+          "deposit_percent_max": 30,
+          "mfr": 12,
+          "mfr_tolerance": 2
+        },
+        "records": [
+          {
+            "supplier": "Demo_Supplier_A_Quotation.pdf",
+            "file": "Demo_Supplier_A_Quotation.pdf",
+            "sha256": "153d08ad7714d09774f9322c4ddb755cc44fee3918f40eb53c0a24699fd8f194",
+            "fields": {
+              "supplier": {
+                "value": null,
+                "page": null,
+                "status": "확인 필요",
+                "model_value": "ATLASGORI AI"
+              },
+              "quantity": {
+                "value": "20 MT (20,000 kg)",
+                "page": 1,
+                "status": "원문 라벨 확인",
+                "model_value": "20 MT (20,000 kg)"
+              },
+              "moq": {
+                "value": "20 MT",
+                "page": 1,
+                "status": "원문 라벨 확인",
+                "model_value": "20 MT"
+              },
+              "unit_price": {
+                "value": "USD 980 / MT",
+                "page": 1,
+                "status": "원문 라벨 확인",
+                "model_value": "USD 980 / MT"
+              },
+              "amount": {
+                "value": "USD 19,600",
+                "page": 1,
+                "status": "원문 라벨 확인",
+                "model_value": "USD 19,600"
+              },
+              "terms": {
+                "value": "FOB Laem Chabang, Incoterms 2020",
+                "page": 1,
+                "status": "원문 라벨 확인",
+                "model_value": "FOB Laem Chabang, Incoterms 2020"
+              },
+              "freight": {
+                "value": "Excluded",
+                "page": 1,
+                "status": "원문 라벨 확인",
+                "model_value": "Excluded"
+              },
+              "insurance": {
+                "value": "Excluded",
+                "page": 1,
+                "status": "원문 라벨 확인",
+                "model_value": "Excluded"
+              },
+              "shipment": {
+                "value": "28 days after receipt of deposit",
+                "page": 1,
+                "status": "원문 라벨 확인",
+                "model_value": "[object Object]"
+              },
+              "payment": {
+                "value": "30% deposit; 70% against copy of bill of lading",
+                "page": 1,
+                "status": "원문 라벨 확인",
+                "model_value": "[object Object]"
+              },
+              "mfr": {
+                "value": "12 g/10 min at 230 C / 2.16 kg",
+                "page": 1,
+                "status": "원문 라벨 확인",
+                "model_value": "12 g/10 min at 230 C / 2.16 kg"
+              },
+              "documents": {
+                "value": "TDS, shipment-lot COA and SDS provided",
+                "page": 1,
+                "status": "원문 라벨 확인",
+                "model_value": "TDS,shipment-lot COA and SDS"
+              },
+              "validity": {
+                "value": "Through 26 October 2026",
+                "page": 1,
+                "status": "원문 라벨 확인",
+                "model_value": "Through 26 October 2026"
+              },
+              "product": {
+                "value": "Virgin PP homopolymer, injection molding grade",
+                "page": 1,
+                "status": "원문 라벨 확인",
+                "model_value": "Virgin PP homopolymer, injection molding grade"
+              },
+              "destination": {
+                "value": "Busan, Republic of Korea",
+                "page": 1,
+                "status": "원문 라벨 확인",
+                "model_value": "Busan, Republic of Korea"
+              }
+            },
+            "quantity_mt": 20.0,
+            "moq_mt": 20.0,
+            "unit_price": 980.0,
+            "quoted_amount": 19600.0,
+            "comparable_total": 20880.0,
+            "cost_type": "물류 가정 포함 추정액",
+            "assumptions": {
+              "freight": 1200.0,
+              "insurance": 80.0
+            },
+            "shipment_days": 28.0,
+            "eligible": false,
+            "warnings": [
+              "선적 28일: 21일 기준 초과"
+            ],
+            "corrections": [
+              {
+                "field": "shipment",
+                "model": "[object Object]",
+                "source": "28 days after receipt of deposit",
+                "page": 1
+              },
+              {
+                "field": "payment",
+                "model": "[object Object]",
+                "source": "30% deposit; 70% against copy of bill of lading",
+                "page": 1
+              },
+              {
+                "field": "documents",
+                "model": "TDS,shipment-lot COA and SDS",
+                "source": "TDS, shipment-lot COA and SDS provided",
+                "page": 1
+              }
+            ],
+            "model": {
+              "supplier": "ATLASGORI AI",
+              "product": "Virgin PP homopolymer, injection molding grade",
+              "destination": "Busan, Republic of Korea",
+              "quantity": "20 MT (20,000 kg)",
+              "moq": "20 MT",
+              "unit_price": "USD 980 / MT",
+              "amount": "USD 19,600",
+              "terms": "FOB Laem Chabang, Incoterms 2020",
+              "freight": "Excluded",
+              "insurance": "Excluded",
+              "shipment": "[object Object]",
+              "payment": "[object Object]",
+              "mfr": "12 g/10 min at 230 C / 2.16 kg",
+              "documents": "TDS,shipment-lot COA and SDS",
+              "validity": "Through 26 October 2026"
+            },
+            "pages": [
+              {
+                "page": 1,
+                "text": "AtlasGori AI | Synthetic quotation dataset | 23 October 2026\n1\nATLASGORI AI / HACKATHON SAMPLE\n Demo Supplier A\nQUOTATION DEMO-A-20261023\nFICTIONAL DATA - FOR DEMO AND TESTING ONLY. Not a commercial offer.\nBuyer\nAtlasGori Demo Buyer\nIssue date\n23 October 2026\nProduct\nVirgin PP homopolymer, injection molding grade\nQuoted quantity\n20 MT (20,000 kg)\nPackaging\n25 kg bags\nDestination\nBusan, Republic of Korea\nQuotation validity\nThrough 26 October 2026\nGrade\nDEMO-PP-A12\nMFR\n12 g/10 min at 230 C / 2.16 kg\nMinimum order\n20 MT\nUnit price\nUSD 980 / MT\nGoods amount\nUSD 19,600\nTrade terms\nFOB Laem Chabang, Incoterms 2020\nOcean freight\nExcluded\nCargo insurance\nExcluded\nShipment\n28 days after receipt of deposit\nPayment\n30% deposit; 70% against copy of bill of lading\nDocuments\nTDS, shipment-lot COA and SDS provided\nBag count\n800 bags\nSeparate demo logistics assumptions\nOcean freight: USD 1,200 per shipment. Cargo insurance: USD 80 per shipment. These are fictional comparison\nassumptions, not supplier-confirmed charges.\nComparison scope excludes import duties, VAT, customs clearance, destination local charges and inland transport. MT =\nmetric tonne (1,000 kg). All supplier names, grades, prices and terms are fictional.\n"
+              }
+            ]
+          },
+          {
+            "supplier": "Demo_Supplier_B_Quotation.pdf",
+            "file": "Demo_Supplier_B_Quotation.pdf",
+            "sha256": "1a07d3076b336981e3ea40dcc04b01f1c82b7db22f7189e65f690699c4c957c7",
+            "fields": {
+              "supplier": {
+                "value": null,
+                "page": null,
+                "status": "확인 필요",
+                "model_value": "ATLASGORI AI"
+              },
+              "quantity": {
+                "value": "20 MT (20,000 kg)",
+                "page": 1,
+                "status": "원문 라벨 확인",
+                "model_value": "20 MT (20,000 kg)"
+              },
+              "moq": {
+                "value": "20 MT",
+                "page": 1,
+                "status": "원문 라벨 확인",
+                "model_value": "20 MT"
+              },
+              "unit_price": {
+                "value": "USD 1,055 / MT",
+                "page": 1,
+                "status": "원문 라벨 확인",
+                "model_value": "USD 1,055 / MT"
+              },
+              "amount": {
+                "value": "USD 21,100",
+                "page": 1,
+                "status": "원문 라벨 확인",
+                "model_value": "USD 21,100"
+              },
+              "terms": {
+                "value": "CIF Busan, Incoterms 2020",
+                "page": 1,
+                "status": "원문 라벨 확인",
+                "model_value": "CIF Busan, Incoterms 2020"
+              },
+              "freight": {
+                "value": "Included",
+                "page": 1,
+                "status": "원문 라벨 확인",
+                "model_value": "Included"
+              },
+              "insurance": {
+                "value": "Included; insured amount 110% of contract value; ICC(C)",
+                "page": 1,
+                "status": "원문 라벨 확인",
+                "model_value": "Included; insured amount 110% of contract value; ICC(C)"
+              },
+              "shipment": {
+                "value": "14 days after receipt of deposit",
+                "page": 1,
+                "status": "원문 라벨 확인",
+                "model_value": "[object Object]"
+              },
+              "payment": {
+                "value": "20% deposit; 80% against copy of bill of lading",
+                "page": 1,
+                "status": "원문 라벨 확인",
+                "model_value": "[object Object]"
+              },
+              "mfr": {
+                "value": "12 g/10 min at 230 C / 2.16 kg",
+                "page": 1,
+                "status": "원문 라벨 확인",
+                "model_value": "12 g/10 min at 230 C / 2.16 kg"
+              },
+              "documents": {
+                "value": "TDS, shipment-lot COA and SDS provided",
+                "page": 1,
+                "status": "원문 라벨 확인",
+                "model_value": "TDS,shipment-lot COA and SDS"
+              },
+              "validity": {
+                "value": "Through 27 October 2026",
+                "page": 1,
+                "status": "원문 라벨 확인",
+                "model_value": "Through 27 October 2026"
+              },
+              "product": {
+                "value": "Virgin PP homopolymer, injection molding grade",
+                "page": 1,
+                "status": "원문 라벨 확인",
+                "model_value": "Virgin PP homopolymer, injection molding grade"
+              },
+              "destination": {
+                "value": "Busan, Republic of Korea",
+                "page": 1,
+                "status": "원문 라벨 확인",
+                "model_value": "Busan, Republic of Korea"
+              }
+            },
+            "quantity_mt": 20.0,
+            "moq_mt": 20.0,
+            "unit_price": 1055.0,
+            "quoted_amount": 21100.0,
+            "comparable_total": 21100.0,
+            "cost_type": "견적 기준 CIF 금액",
+            "assumptions": {},
+            "shipment_days": 14.0,
+            "eligible": true,
+            "warnings": [],
+            "corrections": [
+              {
+                "field": "shipment",
+                "model": "[object Object]",
+                "source": "14 days after receipt of deposit",
+                "page": 1
+              },
+              {
+                "field": "payment",
+                "model": "[object Object]",
+                "source": "20% deposit; 80% against copy of bill of lading",
+                "page": 1
+              },
+              {
+                "field": "documents",
+                "model": "TDS,shipment-lot COA and SDS",
+                "source": "TDS, shipment-lot COA and SDS provided",
+                "page": 1
+              }
+            ],
+            "model": {
+              "supplier": "ATLASGORI AI",
+              "product": "Virgin PP homopolymer, injection molding grade",
+              "destination": "Busan, Republic of Korea",
+              "quantity": "20 MT (20,000 kg)",
+              "moq": "20 MT",
+              "unit_price": "USD 1,055 / MT",
+              "amount": "USD 21,100",
+              "terms": "CIF Busan, Incoterms 2020",
+              "freight": "Included",
+              "insurance": "Included; insured amount 110% of contract value; ICC(C)",
+              "shipment": "[object Object]",
+              "payment": "[object Object]",
+              "mfr": "12 g/10 min at 230 C / 2.16 kg",
+              "documents": "TDS,shipment-lot COA and SDS",
+              "validity": "Through 27 October 2026"
+            },
+            "pages": [
+              {
+                "page": 1,
+                "text": "AtlasGori AI | Synthetic quotation dataset | 23 October 2026\n1\nATLASGORI AI / HACKATHON SAMPLE\n Demo Supplier B\nQUOTATION DEMO-B-20261023\nFICTIONAL DATA - FOR DEMO AND TESTING ONLY. Not a commercial offer.\nBuyer\nAtlasGori Demo Buyer\nIssue date\n23 October 2026\nProduct\nVirgin PP homopolymer, injection molding grade\nQuoted quantity\n20 MT (20,000 kg)\nPackaging\n25 kg bags\nDestination\nBusan, Republic of Korea\nQuotation validity\nThrough 27 October 2026\nGrade\nDEMO-PP-B12\nMFR\n12 g/10 min at 230 C / 2.16 kg\nMinimum order\n20 MT\nUnit price\nUSD 1,055 / MT\nQuotation total\nUSD 21,100\nTrade terms\nCIF Busan, Incoterms 2020\nOcean freight\nIncluded\nCargo insurance\nIncluded; insured amount 110% of contract value; ICC(C)\nShipment\n14 days after receipt of deposit\nPayment\n20% deposit; 80% against copy of bill of lading\nDocuments\nTDS, shipment-lot COA and SDS provided\nBag count\n800 bags\nComparison scope excludes import duties, VAT, customs clearance, destination local charges and inland transport. MT =\nmetric tonne (1,000 kg). All supplier names, grades, prices and terms are fictional.\n"
+              }
+            ]
+          },
+          {
+            "supplier": "Demo_Supplier_C_Quotation.pdf",
+            "file": "Demo_Supplier_C_Quotation.pdf",
+            "sha256": "025c9eb6042e8af4fece68e87c57d3cf017d2394cf48c76ebbe8f4185e1315a1",
+            "fields": {
+              "supplier": {
+                "value": null,
+                "page": null,
+                "status": "확인 필요",
+                "model_value": "ATLASGORI AI"
+              },
+              "quantity": {
+                "value": "20 MT (20,000 kg)",
+                "page": 1,
+                "status": "원문 라벨 확인",
+                "model_value": "20 MT (20,000 kg)"
+              },
+              "moq": {
+                "value": "25 MT",
+                "page": 1,
+                "status": "원문 라벨 확인",
+                "model_value": "25 MT"
+              },
+              "unit_price": {
+                "value": "USD 1,020 / MT",
+                "page": 1,
+                "status": "원문 라벨 확인",
+                "model_value": "USD 1,020 / MT"
+              },
+              "amount": {
+                "value": "USD 20,400, calculated for 20 MT",
+                "page": 1,
+                "status": "원문 라벨 확인",
+                "model_value": "USD 20,400"
+              },
+              "terms": {
+                "value": "CIF Busan, Incoterms 2020",
+                "page": 1,
+                "status": "원문 라벨 확인",
+                "model_value": "CIF Busan, Incoterms 2020"
+              },
+              "freight": {
+                "value": "Included",
+                "page": 1,
+                "status": "원문 라벨 확인",
+                "model_value": "Included"
+              },
+              "insurance": {
+                "value": "Buyer to arrange separately",
+                "page": 1,
+                "status": "원문 라벨 확인",
+                "model_value": "Buyer to arrange separately"
+              },
+              "shipment": {
+                "value": "10 days after contract; payment trigger not stated",
+                "page": 1,
+                "status": "원문 라벨 확인",
+                "model_value": "[object Object]"
+              },
+              "payment": {
+                "value": "100% payment before shipment",
+                "page": 1,
+                "status": "원문 라벨 확인",
+                "model_value": "[object Object]"
+              },
+              "mfr": {
+                "value": "12 g/10 min; test conditions not stated",
+                "page": 1,
+                "status": "원문 라벨 확인",
+                "model_value": "12 g/10 min; test conditions not stated"
+              },
+              "documents": {
+                "value": "TDS provided; COA considered on request; SDS not stated",
+                "page": 1,
+                "status": "원문 라벨 확인",
+                "model_value": "TDS,COA considered on request,SDS not stated"
+              },
+              "validity": {
+                "value": "Not stated",
+                "page": 1,
+                "status": "원문 라벨 확인",
+                "model_value": "Not stated"
+              },
+              "product": {
+                "value": "Virgin PP homopolymer, injection molding grade",
+                "page": 1,
+                "status": "원문 라벨 확인",
+                "model_value": "Virgin PP homopolymer, injection molding grade"
+              },
+              "destination": {
+                "value": "Busan, Republic of Korea",
+                "page": 1,
+                "status": "원문 라벨 확인",
+                "model_value": "Busan, Republic of Korea"
+              }
+            },
+            "quantity_mt": 20.0,
+            "moq_mt": 25.0,
+            "unit_price": 1020.0,
+            "quoted_amount": 20400.0,
+            "comparable_total": null,
+            "cost_type": "MOQ 정정 전 미확정",
+            "assumptions": {},
+            "shipment_days": 10.0,
+            "eligible": false,
+            "warnings": [
+              "MOQ가 견적수량보다 큼",
+              "CIF 표기와 보험 포함 조건 미확인 또는 충돌",
+              "비교 범위의 운임·보험 또는 가격 산식 확인 필요",
+              "선적 기산점 또는 일수 확인 필요",
+              "선금 한도·잔금 B/L 사본 조건 미충족 또는 확인 필요",
+              "MFR 수치·시험 온도·하중 확인 필요",
+              "TDS·선적 로트 COA·SDS 제공 확약 확인 필요",
+              "COA의 선적 로트 일치 확인 필요",
+              "견적 유효기간 확인 필요"
+            ],
+            "corrections": [
+              {
+                "field": "amount",
+                "model": "USD 20,400",
+                "source": "USD 20,400, calculated for 20 MT",
+                "page": 1
+              },
+              {
+                "field": "shipment",
+                "model": "[object Object]",
+                "source": "10 days after contract; payment trigger not stated",
+                "page": 1
+              },
+              {
+                "field": "payment",
+                "model": "[object Object]",
+                "source": "100% payment before shipment",
+                "page": 1
+              },
+              {
+                "field": "documents",
+                "model": "TDS,COA considered on request,SDS not stated",
+                "source": "TDS provided; COA considered on request; SDS not stated",
+                "page": 1
+              }
+            ],
+            "model": {
+              "supplier": "ATLASGORI AI",
+              "product": "Virgin PP homopolymer, injection molding grade",
+              "destination": "Busan, Republic of Korea",
+              "quantity": "20 MT (20,000 kg)",
+              "moq": "25 MT",
+              "unit_price": "USD 1,020 / MT",
+              "amount": "USD 20,400",
+              "terms": "CIF Busan, Incoterms 2020",
+              "freight": "Included",
+              "insurance": "Buyer to arrange separately",
+              "shipment": "[object Object]",
+              "payment": "[object Object]",
+              "mfr": "12 g/10 min; test conditions not stated",
+              "documents": "TDS,COA considered on request,SDS not stated",
+              "validity": "Not stated"
+            },
+            "pages": [
+              {
+                "page": 1,
+                "text": "AtlasGori AI | Synthetic quotation dataset | 23 October 2026\n1\nATLASGORI AI / HACKATHON SAMPLE\n Demo Supplier C\nQUOTATION DEMO-C-20261023\nFICTIONAL DATA - FOR DEMO AND TESTING ONLY. Not a commercial offer.\nBuyer\nAtlasGori Demo Buyer\nIssue date\n23 October 2026\nProduct\nVirgin PP homopolymer, injection molding grade\nQuoted quantity\n20 MT (20,000 kg)\nPackaging\n25 kg bags\nDestination\nBusan, Republic of Korea\nQuotation validity\nNot stated\nGrade\nDEMO-PP-C12\nMFR\n12 g/10 min; test conditions not stated\nMinimum order\n25 MT\nUnit price\nUSD 1,020 / MT\nQuotation total\nUSD 20,400, calculated for 20 MT\nTrade terms\nCIF Busan, Incoterms 2020\nOcean freight\nIncluded\nCargo insurance\nBuyer to arrange separately\nShipment\n10 days after contract; payment trigger not stated\nPayment\n100% payment before shipment\nDocuments\nTDS provided; COA considered on request; SDS not stated\nComparison scope excludes import duties, VAT, customs clearance, destination local charges and inland transport. MT =\nmetric tonne (1,000 kg). All supplier names, grades, prices and terms are fictional.\n"
+              }
+            ]
+          }
+        ],
+        "recommended_files": [
+          "Demo_Supplier_B_Quotation.pdf"
+        ],
+        "receipts": [
+          {
+            "http_status": 200,
+            "model": "local-runtime/llama-3.2-3b-instruct",
+            "privacy": "local-only",
+            "elapsed_ms": 41580,
+            "actual_cost_usd": 0,
+            "raw_response": "{\n  \"supplier\": \"ATLASGORI AI\",\n  \"product\": \"Virgin PP homopolymer, injection molding grade\",\n  \"destination\": \"Busan, Republic of Korea\",\n  \"quantity\": \"20 MT (20,000 kg)\",\n  \"moq\": \"20 MT\",\n  \"unit_price\": \"USD 980 / MT\",\n  \"amount\": \"USD 19,600\",\n  \"terms\": \"FOB Laem Chabang, Incoterms 2020\",\n  \"freight\": \"Excluded\",\n  \"insurance\": \"Excluded\",\n  \"shipment\": {\n    \"trigger\": \"28 days after receipt of deposit\"\n  },\n  \"payment\": {\n    \"percent\": \"30\",\n    \"trigger\": \"copy of bill of lading\"\n  },\n  \"mfr\": \"12 g/10 min at 230 C / 2.16 kg\",\n  \"documents\": [\"TDS\", \"shipment-lot COA and SDS\"],\n  \"validity\": \"Through 26 October 2026\"\n}"
+          },
+          {
+            "http_status": 200,
+            "model": "local-runtime/llama-3.2-3b-instruct",
+            "privacy": "local-only",
+            "elapsed_ms": 43061,
+            "actual_cost_usd": 0,
+            "raw_response": "{\n  \"supplier\": \"ATLASGORI AI\",\n  \"product\": \"Virgin PP homopolymer, injection molding grade\",\n  \"destination\": \"Busan, Republic of Korea\",\n  \"quantity\": \"20 MT (20,000 kg)\",\n  \"moq\": \"20 MT\",\n  \"unit_price\": \"USD 1,055 / MT\",\n  \"amount\": \"USD 21,100\",\n  \"terms\": \"CIF Busan, Incoterms 2020\",\n  \"freight\": \"Included\",\n  \"insurance\": \"Included; insured amount 110% of contract value; ICC(C)\",\n  \"shipment\": {\n    \"trigger\": \"14 days after receipt of deposit\"\n  },\n  \"payment\": {\n    \"percent\": \"20\",\n    \"trigger\": \"copy of bill of lading\"\n  },\n  \"mfr\": \"12 g/10 min at 230 C / 2.16 kg\",\n  \"documents\": [\"TDS\", \"shipment-lot COA and SDS\"],\n  \"validity\": \"Through 27 October 2026\"\n}"
+          },
+          {
+            "http_status": 200,
+            "model": "local-runtime/llama-3.2-3b-instruct",
+            "privacy": "local-only",
+            "elapsed_ms": 39294,
+            "actual_cost_usd": 0,
+            "raw_response": "{\n  \"supplier\": \"ATLASGORI AI\",\n  \"product\": \"Virgin PP homopolymer, injection molding grade\",\n  \"destination\": \"Busan, Republic of Korea\",\n  \"quantity\": \"20 MT (20,000 kg)\",\n  \"moq\": \"25 MT\",\n  \"unit_price\": \"USD 1,020 / MT\",\n  \"amount\": \"USD 20,400\",\n  \"terms\": \"CIF Busan, Incoterms 2020\",\n  \"freight\": \"Included\",\n  \"insurance\": \"Buyer to arrange separately\",\n  \"shipment\": {\n    \"trigger\": \"10 days after contract\"\n  },\n  \"payment\": {\n    \"percent\": \"100%\",\n    \"trigger\": \"Shipment trigger\"\n  },\n  \"mfr\": \"12 g/10 min; test conditions not stated\",\n  \"documents\": [\"TDS\", \"COA considered on request\", \"SDS not stated\"],\n  \"validity\": \"Not stated\"\n}"
+          }
+        ],
+        "scope": "상품 + 해상운임 + 보험. 관세·VAT·통관·도착항 현지비용·국내운송 제외. 선적일은 부산 도착일이 아닙니다.",
+        "method": "Meterless 모델 추출 → 원문 라벨 대조 → 금액 계산·거래 조건 규칙 → 비교표. 원문 라벨 미지원·누락·상충 시 확인 필요."
+      }
+    },
+    {
+      "status": "done",
+      "stage": "분석·검증 완료",
+      "progress": 100,
+      "started": 1792741221.0335295,
+      "result": {
+        "run_id": "936138b8e4034b378333e13ce4674848",
+        "created_kst": "2026-10-23 16:41:50",
+        "criteria": {
+          "quantity_mt": 20,
+          "shipment_days_max": 21,
+          "deposit_percent_max": 30,
+          "mfr": 12,
+          "mfr_tolerance": 2
+        },
+        "records": [
+          {
+            "supplier": "Northwind Resin Demo",
+            "file": "New_Resin_Quote.pdf",
+            "sha256": "9f60de6e660d6719a185dda97ea1c82a301bf03c0979e0ee06bec03f63c42792",
+            "fields": {
+              "supplier": {
+                "value": "Northwind Resin Demo",
+                "page": 1,
+                "status": "원문 라벨 확인",
+                "model_value": "ATLASGORI AI"
+              },
+              "quantity": {
+                "value": "20 MT (20,000 kg)",
+                "page": 1,
+                "status": "원문 라벨 확인",
+                "model_value": "20 MT (20,000 kg)"
+              },
+              "moq": {
+                "value": "20 MT",
+                "page": 1,
+                "status": "원문 라벨 확인",
+                "model_value": "20 MT"
+              },
+              "unit_price": {
+                "value": "USD 950 / MT",
+                "page": 1,
+                "status": "원문 라벨 확인",
+                "model_value": "USD 950 / MT"
+              },
+              "amount": {
+                "value": "USD 19,000",
+                "page": 1,
+                "status": "원문 라벨 확인",
+                "model_value": "USD 19,000"
+              },
+              "terms": {
+                "value": "CIF Busan, Incoterms 2020",
+                "page": 1,
+                "status": "원문 라벨 확인",
+                "model_value": "CIF Busan, Incoterms 2020"
+              },
+              "freight": {
+                "value": "Included",
+                "page": 1,
+                "status": "원문 라벨 확인",
+                "model_value": "Included"
+              },
+              "insurance": {
+                "value": "Included; insured amount 110% of contract value; ICC(C)",
+                "page": 1,
+                "status": "원문 라벨 확인",
+                "model_value": "Included; insured amount 110% of contract value; ICC(C)"
+              },
+              "shipment": {
+                "value": "12 days after receipt of deposit",
+                "page": 1,
+                "status": "원문 라벨 확인",
+                "model_value": "[object Object]"
+              },
+              "payment": {
+                "value": "20% deposit; 80% against copy of bill of lading",
+                "page": 1,
+                "status": "원문 라벨 확인",
+                "model_value": "[object Object]"
+              },
+              "mfr": {
+                "value": "12 g/10 min at 230 C / 2.16 kg",
+                "page": 1,
+                "status": "원문 라벨 확인",
+                "model_value": "12 g/10 min at 230 C / 2.16 kg"
+              },
+              "documents": {
+                "value": "TDS, shipment-lot COA and SDS provided",
+                "page": 1,
+                "status": "원문 라벨 확인",
+                "model_value": "TDS,shipment-lot COA and SDS"
+              },
+              "validity": {
+                "value": "Through 27 October 2026",
+                "page": 1,
+                "status": "원문 라벨 확인",
+                "model_value": "Through 27 October 2026"
+              },
+              "product": {
+                "value": "Virgin PP homopolymer, injection molding grade",
+                "page": 1,
+                "status": "원문 라벨 확인",
+                "model_value": "Virgin PP homopolymer, injection molding grade"
+              },
+              "destination": {
+                "value": "Busan, Republic of Korea",
+                "page": 1,
+                "status": "원문 라벨 확인",
+                "model_value": "Busan, Republic of Korea"
+              }
+            },
+            "quantity_mt": 20.0,
+            "moq_mt": 20.0,
+            "unit_price": 950.0,
+            "quoted_amount": 19000.0,
+            "comparable_total": 19000.0,
+            "cost_type": "견적 기준 CIF 금액",
+            "assumptions": {},
+            "shipment_days": 12.0,
+            "eligible": true,
+            "warnings": [],
+            "corrections": [
+              {
+                "field": "supplier",
+                "model": "ATLASGORI AI",
+                "source": "Northwind Resin Demo",
+                "page": 1
+              },
+              {
+                "field": "shipment",
+                "model": "[object Object]",
+                "source": "12 days after receipt of deposit",
+                "page": 1
+              },
+              {
+                "field": "payment",
+                "model": "[object Object]",
+                "source": "20% deposit; 80% against copy of bill of lading",
+                "page": 1
+              },
+              {
+                "field": "documents",
+                "model": "TDS,shipment-lot COA and SDS",
+                "source": "TDS, shipment-lot COA and SDS provided",
+                "page": 1
+              }
+            ],
+            "model": {
+              "supplier": "ATLASGORI AI",
+              "product": "Virgin PP homopolymer, injection molding grade",
+              "destination": "Busan, Republic of Korea",
+              "quantity": "20 MT (20,000 kg)",
+              "moq": "20 MT",
+              "unit_price": "USD 950 / MT",
+              "amount": "USD 19,000",
+              "terms": "CIF Busan, Incoterms 2020",
+              "freight": "Included",
+              "insurance": "Included; insured amount 110% of contract value; ICC(C)",
+              "shipment": "[object Object]",
+              "payment": "[object Object]",
+              "mfr": "12 g/10 min at 230 C / 2.16 kg",
+              "documents": "TDS,shipment-lot COA and SDS",
+              "validity": "Through 27 October 2026"
+            },
+            "pages": [
+              {
+                "page": 1,
+                "text": "Supplier\nNorthwind Resin Demo\nAtlasGori AI | Synthetic quotation dataset | 23 October 2026\n1\nATLASGORI AI / HACKATHON SAMPLE\n Demo Supplier B\nQUOTATION DEMO-B-20261023\nFICTIONAL DATA - FOR DEMO AND TESTING ONLY. Not a commercial offer.\nBuyer\nAtlasGori Demo Buyer\nIssue date\n23 October 2026\nProduct\nVirgin PP homopolymer, injection molding grade\nQuoted quantity\n20 MT (20,000 kg)\nPackaging\n25 kg bags\nDestination\nBusan, Republic of Korea\nQuotation validity\nThrough 27 October 2026\nGrade\nDEMO-PP-B12\nMFR\n12 g/10 min at 230 C / 2.16 kg\nMinimum order\n20 MT\nUnit price\nUSD 950 / MT\nQuotation total\nUSD 19,000\nTrade terms\nCIF Busan, Incoterms 2020\nOcean freight\nIncluded\nCargo insurance\nIncluded; insured amount 110% of contract value; ICC(C)\nShipment\n12 days after receipt of deposit\nPayment\n20% deposit; 80% against copy of bill of lading\nDocuments\nTDS, shipment-lot COA and SDS provided\nBag count\n800 bags\nComparison scope excludes import duties, VAT, customs clearance, destination local charges and inland transport. MT =\nmetric tonne (1,000 kg). All supplier names, grades, prices and terms are fictional.\n"
+              }
+            ]
+          }
+        ],
+        "recommended_files": [
+          "New_Resin_Quote.pdf"
+        ],
+        "receipts": [
+          {
+            "http_status": 200,
+            "model": "local-runtime/llama-3.2-3b-instruct",
+            "privacy": "local-only",
+            "elapsed_ms": 84948,
+            "actual_cost_usd": 0,
+            "raw_response": "{\n  \"supplier\": \"ATLASGORI AI\",\n  \"product\": \"Virgin PP homopolymer, injection molding grade\",\n  \"destination\": \"Busan, Republic of Korea\",\n  \"quantity\": \"20 MT (20,000 kg)\",\n  \"moq\": \"20 MT\",\n  \"unit_price\": \"USD 950 / MT\",\n  \"amount\": \"USD 19,000\",\n  \"terms\": \"CIF Busan, Incoterms 2020\",\n  \"freight\": \"Included\",\n  \"insurance\": \"Included; insured amount 110% of contract value; ICC(C)\",\n  \"shipment\": {\n    \"trigger\": \"12 days after receipt of deposit\"\n  },\n  \"payment\": {\n    \"percent\": \"20\",\n    \"trigger\": \"copy of bill of lading\"\n  },\n  \"mfr\": \"12 g/10 min at 230 C / 2.16 kg\",\n  \"documents\": [\"TDS\", \"shipment-lot COA and SDS\"],\n  \"validity\": \"Through 27 October 2026\"\n}"
+          }
+        ],
+        "scope": "상품 + 해상운임 + 보험. 관세·VAT·통관·도착항 현지비용·국내운송 제외. 선적일은 부산 도착일이 아닙니다.",
+        "method": "Meterless 모델 추출 → 원문 라벨 대조 → 금액 계산·거래 조건 규칙 → 비교표. 원문 라벨 미지원·누락·상충 시 확인 필요."
+      }
+    }
+  ],
+  "malformed_pdf_error": "Stream has ended unexpectedly",
+  "passed": true
+}
