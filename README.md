@@ -1,6 +1,6 @@
 # Atlasgori — an email assistant for busy people
 
-Wildcard [Tinkerer]: Bring Your Own Project — owner review revision, 27 October 2026.
+Wildcard [Tinkerer]: Bring Your Own Project — published submission revision, 27 October 2026.
 
 ## Who it is for
 
@@ -40,6 +40,10 @@ Operational screenshots, account-management utilities, all build/runtime folders
 
 ## Publication and attribution
 
-Existing public repository: https://github.com/atras-kim/atlasgori-ai . Its current published main contains the earlier PDF demo, not this proposed update. The submission page was observed as Submitted1/1 on 27 October. This local Wildcard revision has NOT been uploaded, used to change track, or saved to that submission. Owner approval is required before those changes.
+The owner approved publication on 27 October 2026. The approved source and evidence were published in commit 4213b635fc0465ef0cd5666e813be47176d75469. The existing submission was changed to Wildcard, saved, and reloaded successfully with Submitted 1/1 at 23:03 KST. No production deployment or security-setting change was performed.
 
-Jongmyoung Kim supplies product and trade-workflow direction. Codex assisted implementation and materials. Pre-existing application code is declared; only the identified new work should be evaluated as the hackathon extension. Vendor runtimes, models and libraries retain their own licences. No repository-wide open-source licence has been selected. No Cursor, NVIDIA-specific or Nemotron integration is claimed.
+Published demo: https://iframe.mediadelivery.net/embed/778121/75b9ef16-b209-4893-b347-b5d2e4644697
+
+Published pitch deck: https://hackathon-server.genai.works/api/v1/cdn/proxy/hackathon/b59f1a6e8b4d43aeafca78ff336339c2.pptx
+
+Jongmyoung Kim supplies product direction. Codex assisted implementation and materials. Pre-existing application code is declared; only the identified new work should be evaluated as the hackathon extension. Vendor runtimes, models and libraries retain their own licences. No repository-wide open-source licence has been selected. No Cursor, NVIDIA-specific or Nemotron integration is claimed.
