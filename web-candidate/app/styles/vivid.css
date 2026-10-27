@@ -1,0 +1,114 @@
+/* High-contrast visual treatment; preserve workspace sizing and interactions. */
+:root{--blue:#0755f5;--navy:#0755f5;--ink:#152544;--muted:#4c607d;--line:#d8e2f1}
+.reply-suggestion .reply-body-label{font-size:13px;font-weight:750;color:#244b83;display:flex;gap:8px}
+.reply-body-label textarea{width:100%;min-height:220px;resize:vertical;background:#fff;border:1px solid #afc9ef;color:#233d62;font-size:14px;line-height:1.8;font-weight:400}
+.reply-suggestion .approval{margin:16px 0;padding:14px;border:1px solid #c7dcfa;background:#f3f8ff;border-radius:10px}
+.reply-suggestion .approval textarea{min-height:88px;font-size:13px;background:white}
+.reply-suggestion .approval label{font-size:12px;color:#34547e}
+.sidebar{background:#081c3b;border-right-color:#183c70}
+.sidebar .brand{color:#fff;font-weight:800}
+.sidebar .brand-mark{background:#1464ff;box-shadow:0 4px 16px #0062ff40}
+.sidebar .workspace-label,.sidebar .nav-section{color:#b7ccef}
+.sidebar .nav-item{font-size:14px;font-weight:650;color:#e0eaff}
+.sidebar .nav-item.active,.sidebar .nav-item.active:hover{background:#0755ed;color:white;box-shadow:0 5px 15px #00143744}
+.sidebar .nav-item.active svg{color:white}
+.sidebar .count{background:#fff;color:#0748c7;font-weight:800}
+.sidebar .project-nav button,.sidebar-accounts button{color:#e0eaff;font-size:12px;font-weight:600}
+.page-heading h1,.dashboard-shell .page-heading h1{font-size:26px;font-weight:800;color:#102344}
+.breadcrumb{color:#455d7c;font-weight:600}
+.fx strong{color:#064fce;font-size:17px;font-weight:800}
+.button{font-size:13px;font-weight:750;color:#243e67;border-color:#bacce7}
+.button.primary{background:#0755f5;border-color:#0755f5;color:#fff;font-weight:800;box-shadow:0 3px 8px #0755f524}
+.button.primary:hover{background:#003dcb;border-color:#003dcb}
+.button:disabled{opacity:1;color:#536681;background:#e8eef8;border-color:#d1dced;box-shadow:none;cursor:not-allowed}
+input,textarea,select{color:#193455;font-size:14px}
+input::placeholder,textarea::placeholder{color:#647995;opacity:1}
+.project-directory>.section-heading h2{font-size:16px;font-weight:800;color:#173863}
+.project-search{background:#edf3ff;border-color:#ccdcf8;color:#2360bd}
+.project-search input{font-size:13px;font-weight:600}
+.project-directory .project-row strong{font-size:14px;font-weight:800;line-height:1.45;color:#22395b}
+.project-directory .project-row small{font-size:11px;color:#516987}
+.project-directory .project-row .tag{font-size:10px;font-weight:700;background:#e5edf8;color:#34537f}
+.project-directory .project-row.selected{background:#e2eeff;box-shadow:inset 4px 0 #065bff}
+.project-directory .project-row.selected strong{color:#0644bb}
+.project-directory .directory-note{color:#536987}
+.project-heading h2{font-size:25px;font-weight:800;letter-spacing:-.6px;color:#102a50}
+.project-heading p{color:#526c8e;font-size:13px;font-weight:600}
+.project-heading .button{font-size:13px;color:#0755d8}
+.project-tabs{background:#dfeaff;padding:5px;border:1px solid #cbdcfa;gap:5px}
+.project-tabs button{font-size:14px;font-weight:750;color:#3e5d88;padding:10px 19px}
+.project-tabs button.active{background:#0755f5;color:white;box-shadow:0 3px 8px #0755f530}
+.quote-eyebrow{color:#0755dc;font-size:11px;font-weight:800;letter-spacing:1.2px}
+.quote-heading h2{font-size:23px;font-weight:850;color:#122e56;line-height:1.4}
+.quote-heading p{font-size:13px;color:#4f6789}
+.quote-format{background:#e1edff;color:#064bc8;font-size:12px;font-weight:750}
+.quote-stats>div{border-width:1px;background:#eaf2ff;border-color:#cbdfff;color:#0750c7}
+.quote-stats>div:nth-child(2){background:#e3f7ee;border-color:#b7e6ce;color:#087447}
+.quote-stats>div:nth-child(3){background:#fff2d9;border-color:#f0d49e;color:#975900}
+.quote-stats span{font-size:12px;font-weight:750}
+.quote-stats b{font-size:26px;font-weight:850;color:inherit}
+.quote-import{border-color:#a9c8ff;border-top:3px solid #1462f5;background:#fbfdff}
+.quote-import-title strong{font-size:15px;font-weight:800;color:#193c72}
+.quote-help{font-size:12px;color:#355e9b}.quote-help summary{font-weight:700}
+.quote-toolbar select{font-size:14px;font-weight:650;border-color:#b8cdec;background:#fff}
+.quote-toolbar .button{font-size:12px;padding:8px 10px}
+.quote-import .check-label{font-size:12px;line-height:1.6;color:#354d70}
+.quote-import .check-label input{width:15px;height:15px;accent-color:#0755f5}
+.quote-import>.button{font-size:14px;padding:11px 17px;font-weight:800}
+.quote-file-hint{font-size:12px;color:#526d92}
+.quote-empty-icon{background:#e5efff;border-color:#b9d3ff;color:#0755e8}
+.quote-empty h3{font-size:17px;font-weight:800;color:#25456f}
+.quote-empty p{font-size:12px;color:#526a8c}
+.quote-empty ol{font-size:11px;color:#476183;font-weight:600}
+.quote-empty li span{border-color:#b6cef5;background:#eaf2ff;color:#0755d8;font-weight:800}
+.quote-table th{background:#124fac;color:#fff;font-size:13px;font-weight:750}
+.quote-table td{font-size:14px;color:#213c60}.quote-table td b{font-weight:800}.quote-table small{color:#526788}
+.quote-table tbody tr:nth-child(even){background:#f5f9ff}
+.quote-editor h3{color:#154786;font-size:18px;font-weight:800}.quote-fields label{font-size:13px;font-weight:700;color:#355279}
+.brief-title>span{font-size:17px;font-weight:800;color:#16376a}.brief-title svg{color:#0755f5}
+.brief-status h3{font-size:20px;font-weight:800;color:#193b68}
+.brief-section h4{font-size:15px;font-weight:800;color:#244d87}.brief-section li{color:#405a7b;font-size:14px}
+.document-header h2{font-size:18px;font-weight:800;color:#173c71}
+.document-folders button.active{background:#e0edff;color:#0751d6;font-weight:800}
+.document-file strong{color:#23456f;font-size:14px;font-weight:750}
+.sharing summary{font-size:12px;font-weight:700;color:#42618b}
+.dashboard-project-heading select{font-size:19px;font-weight:800;color:#153865}
+.row-sender b{font-size:13px;font-weight:750;color:#20395e}.row-message b{font-size:13px;color:#29446b}.is-unread .row-message b{font-weight:800;color:#102c52}
+.row-message small{font-size:12px;color:#566c8a}.dashboard-mail-row[aria-pressed="true"]{background:#e7f0ff;border-left-color:#0755f5}
+.desk-panel-tabs button[aria-pressed="true"]{background:#0755f5;color:white;font-weight:750}
+@media(max-width:1100px){.project-heading h2{font-size:22px}.quote-heading h2{font-size:20px}.quote-stats span{font-size:11px}.quote-stats b{font-size:23px}}
+@media(max-width:650px){.page-heading h1{font-size:23px}.project-heading h2{font-size:19px}.project-tabs button{font-size:13px;padding:9px 15px}.quote-heading h2{font-size:19px}.quote-stats>div{gap:4px}.quote-stats b{font-size:21px}}
+
+/* atlasgori brand */
+.sidebar .brand{font-size:26px;letter-spacing:-1.1px;gap:9px;padding-left:2px;font-weight:800}
+.brand-symbol{width:40px;height:40px;object-fit:contain;flex:none}
+/* Clear panel boundaries without changing the workspace layout. */
+:root{--line:#a7b9d2}
+.surface,.project-directory,.document-library,.sourcing-intro,.dashboard-center,.dashboard-right,.quote-comparison{border:1px solid #93a9c7;box-shadow:0 0 0 1px #93a9c726}
+.brief-status,.brief-section,.classification,.attachment,.sharing,.quote-table-wrap,.quote-editor,.quote-editor fieldset{border:1px solid #afbed3}
+.quick-sourcing,.dashboard-search,.project-search,.project-tabs,.reply-suggestion,.reply-suggestion .approval,.quote-import{border-color:#8caee1;box-shadow:0 0 0 1px #8caee120}
+input:not([type="checkbox"]):not([type="radio"]),textarea,select,.reply-body-label textarea,.quote-fields input,.quote-toolbar select{border-color:#8ea4c2}
+.dashboard-search input,.project-search input{border:0;box-shadow:none}
+input:focus-visible,textarea:focus-visible,select:focus-visible,button:focus-visible,a:focus-visible{outline:2px solid #0755f5;outline-offset:2px}
+.project-directory .project-row.selected{box-shadow:inset 4px 0 #0755f5,inset 0 0 0 1px #6b9cec}
+.dashboard-mail-row[aria-pressed="true"]{box-shadow:inset 0 0 0 1px #6b9cec}
+.quote-stats>div{border-color:#8fafe0}.quote-stats>div:nth-child(2){border-color:#79b99a}.quote-stats>div:nth-child(3){border-color:#d0ac64}
+/* Wide editing request area in both preview and composer. */
+.draft-assistant .draft-instruction{display:flex!important;flex-direction:column;align-items:stretch!important;width:100%;gap:10px;font-weight:700}
+.draft-assistant .draft-instruction textarea{display:block;box-sizing:border-box;width:100%!important;min-width:0;min-height:140px!important;padding:14px 16px;border:1px solid #9db7d9;border-radius:6px;font-size:14px!important;line-height:1.8;resize:vertical;background:#fff}
+.reply-suggestion .reply-body-label{flex-direction:column;align-items:stretch}
+/* Cobalt logo accents for mail surfaces. */
+.dashboard-center,.dashboard-right,.mail-list,.mail-detail,.embedded-composer{border:2px solid #1450e6;box-sizing:border-box;box-shadow:0 2px 10px #1247cf18}
+.desk-reader .mail-detail,.desk-compose .embedded-composer{border:0;box-shadow:none}
+.mail-card{border:2px solid #7298ef}
+.mail-card.selected,.dashboard-mail-row[aria-pressed="true"]{border-color:#1045d8;box-shadow:inset 4px 0 #1045d8,inset 0 0 0 2px #1450e6}
+.composer-body input,.composer-body select,.composer-body textarea,.embedded-composer .body-label textarea{border:2px solid #527ce0}
+.composer-body input:focus,.composer-body select:focus,.composer-body textarea:focus{border-color:#103ed0;outline:2px solid #1450e633;outline-offset:1px}
+/* Strong, readable labels for primary mail actions. */
+.dashboard-right .desk-panel-tabs button{font-size:14px;font-weight:800;color:#102a56}
+.dashboard-right .desk-panel-tabs button[aria-pressed="true"]{font-weight:800;color:#fff;background:#1045d8}
+.dashboard-right .button,.dashboard-right .text-button,.dashboard-mail-tools .tabs button,.desk-mobile-tabs button{font-weight:800}
+.dashboard-right .button:not(.primary),.dashboard-right .text-button,.dashboard-mail-tools .tabs button{color:#102a56}
+.dashboard-right .button.primary{color:#fff}
+.dashboard-right .panel-title h2,.reply-suggestion-heading b,.compose-original header b{font-weight:800;color:#102a56}
+.dashboard-right button:disabled{opacity:.5}

@@ -1,90 +1,45 @@
-# AtlasGori AI
+# Atlasgori — an email assistant for busy people
 
-Evidence-backed supplier quotation review. Open Agent Hackathon 2026 solo submission preparation.
+Wildcard [Tinkerer]: Bring Your Own Project — owner review revision, 27 October 2026.
 
-## What works
+## Who it is for
 
-1. Read the synthetic buyer policy from local Zetaris.
-2. Upload 1–3 text PDFs or run the included synthetic samples.
-3. Extract fields using a real local Meterless model call.
-4. Check source labels, arithmetic and procurement conditions.
-5. Compare quotes, explain warnings and draft English supplier questions.
-6. Export CSV and JSON with the policy/query provenance and model-call receipts.
+Atlasgori is intended for busy employees, small teams and anyone who finds writing email a chore. It helps users find context and start from an editable draft. Trade is one sample use case, not a restriction on intended users. No measured time saving, broad user study or universal language-quality result is claimed. This is revised submission positioning; the production site was not redesigned or redeployed.
 
-The extraction model does not make purchase decisions. Rules validate supported source labels and compare the results. Follow-up drafts use verified fields and rules; they do not make another model call.
+## Existing product and new work
 
-## Supported environment and dependencies
+The existing ATLASgori product base is explicitly declared as pre-existing work. Its Next.js/TypeScript application source is in web-candidate/. It connects Gmail and supported IMAP/SMTP accounts, groups mail and attachments by project, and provides conditional AI classification, summaries, incoming-mail translation into Korean, evidence-linked project briefs, and reviewed reply drafts. Existing effective AI routes use OpenAI with account consent. Reply preparation can translate an edited Korean draft into the latest sender's language. This is not an assertion of universal language support or newly tested production-mail accuracy. Outlook is not claimed supported.
 
-This prototype currently supports **Windows**. Python 3.12+, Node.js with built-in fetch, Meterless Runtime 1.2.2 with local Llama 3.2 3B Instruct, and an entitled local Zetaris installation are required. Docker Desktop and WSL2 are prerequisites for Zetaris on the tested PC. Hardware needs depend on the local model and vendor runtime. Other operating systems have not been tested.
+The hackathon addition is the sponsor extension in web-candidate/lib/sponsors, its API/UI, private worker, and focused tests. It runs a SEPARATE fixed synthetic paper-supplier scenario: actual local Zetaris SQL, actual Meterless local Llama inference, and normal persistence in a custom H-MEM contract-based subset. It does not replace the production mail AI provider and has not been deployed. The authenticated test dependency was a synthetic local fixture, not real Supabase login.
 
-Meterless and Zetaris must be installed from their official sources under the user's own terms/account. Their binaries, model weights, registry credentials, distribution ZIPs and JDBC drivers are deliberately excluded from this repository.
+The older standalone PDF quotation demo remains in src/meterless_demo/. It is an additional bounded procurement example, not the main subject of the new Wildcard walkthrough. Its synthetic PP results must not be combined with the paper-supplier scenario as one run.
 
-```powershell
-py -3.12 -m venv .venv
-.\.venv\Scripts\Activate.ps1
-python -m pip install -r requirements.txt
-```
+## What the new video shows
 
-Start Meterless and wait until its local model is ready. This app uses Windows local named-pipe runtime status and loopback port 8088. Ensure no cloud key/provider is configured for this local-only demo. Configure the `atlasgori-pdf-demo` app profile for local processing, local-only privacy, race width 1 and Llama 3B. Do not remove another user's cloud settings automatically; use a suitable local runtime configuration. The runner rejects a cloud path or missing local lane. No Meterless bearer token belongs in source control.
+The main story is connected mail → project context → language assistance → reviewed reply. Screens are actual local application DEMO mode with synthetic messages and a prefilled brief/draft. No real account was connected, no customer mail was read, no mail was sent, and no fresh OpenAI call was made to produce those screens. The separate sponsor evidence is an actual development test. The video is narrated slides/screens, not a continuous live recording.
 
-The server uses Meterless's bundled Node when present, then Node on PATH. To select another installation:
+## Run the existing app in safe DEMO mode
 
-```powershell
-$env:ATLASGORI_NODE = 'C:\path\to\node.exe'
-```
+Requirements: Windows, Node.js 20.9 or newer, and the locked npm dependencies. Inside web-candidate run npm ci, npm run typecheck, npm run test:sponsors, then node node_modules/next/dist/bin/next build --webpack. Without Supabase environment configuration, the workspace displays its synthetic DEMO state. Run npm run dev to serve only on 127.0.0.1:4317 and open /workspace. Do not expose the development server publicly. The demo account uses operator@example.invalid. No live AI execution is implied by prefilled DEMO examples.
 
-## Zetaris local setup
+Authenticated production functions require privately supplied Supabase, mail credentials, explicit AI consent and the configured provider. See .env.example and source for variable names. Do not copy production secrets into this repository or chat. This review does not ask you to change a running service, security policy, account or cloud resource.
 
-1. Download your authorized official Zetaris local bundle. Extract it to `.runtime/zetaris/zetaris-platform/` relative to this README. The bundle's `.env` stays local and ignored. Read the vendor README and personally accept any required terms.
-2. Configure its UI on `127.0.0.1:3000`, then start the official stack. Run Docker commands from the bundle folder. Published ports should remain bound to loopback. Wait for PostgreSQL, driver, API and UI to become healthy. Do not use `down -v` unless you intend to erase persistent data.
-3. Create `config/zetaris.env.local` containing only `ZETARIS_MODE=local-bundle`. The demo reads the existing bundle account privately and keeps session tokens in memory. The account is an administrator in this local prototype. Runtime code exposes only two fixed SELECT queries; production requires a scoped read-only identity.
-4. Register the synthetic policy using the bundled official JDBC driver. From this repository root with the stack running:
+## Sponsor extension prerequisites and reproducibility
 
-```powershell
-docker cp scripts/ZetarisPolicySetup.java zetaris-driver-1:/tmp/ZetarisPolicySetup.java
-docker cp .runtime/zetaris/zetaris-platform/jdbc/ndp-jdbc-driver-2.4.3.1-7eff043-driver.jar zetaris-driver-1:/tmp/atlasgori-jdbc.jar
-docker exec zetaris-driver-1 java --class-path /tmp/atlasgori-jdbc.jar /tmp/ZetarisPolicySetup.java
-python scripts/zetaris_register_policy.py
-```
+An entitled local Zetaris installation, Docker prerequisites required by that vendor, Meterless Runtime 1.2.2, and a ready local Llama 3.2 3B Instruct model are external dependencies. Their binaries, model weights, credentials and distribution files are not included. Supply your own authorized installation; no installation or cloud provisioning is automated here.
 
-Adjust the container name/JAR filename only to match the official bundle version you installed. Tested version: Zetaris 2.4.3.1 hackathon distribution. Java reads existing account environment variables inside the container, never a password on the command line. The fixed setup creates a Schema Store container and view without replacing existing objects. If values differ, verification fails; do not silently overwrite them. UI proxy endpoints accept SELECT, not DDL.
+From web-candidate: npm run verify:sponsor-worker -- --live --zetaris-env C:/YOUR/zetaris-platform/.env --meterless-token-file C:/YOUR/runtime/proxy-token . The worker uses only fixed synthetic data and bounded local paths. Use a Runtime without cloud providers/keys for this scenario; the test fails closed otherwise. Do not change another user's runtime settings to force it to pass.
 
-`atlasgori_policy.buyer_criteria` contains one synthetic policy: `PP_BUSAN_DEMO`, quantity 20 MT, maximum shipment 21 days, maximum deposit 30%, MFR 12 with tolerance 2. It is a persistent view over declared demo constants, not an external live procurement database. Fresh-session retrieval was tested; restart persistence was not separately tested during this run.
+scripts/verify-sponsors-web.mjs additionally exercises the actual Next page, POST202/GET polling and private worker with a synthetic local Supabase dependency. It is a development-PC harness with fixed loopback port4318 and an explicit local credential-file path; review those paths before using another PC. It verifies the HTTP workflow, not browser-click behavior or real Supabase authentication. The private worker requires a process-local authorization token and must remain private; see scripts/sponsor-worker.ts and .env.sponsors.example. No token is bundled.
 
-The optional API-key REST adapter is separate and has mocked protocol tests. It is not the authenticated path used for this demo.
+## Evidence and limits
 
-## Run
+evidence/latest-web-verification.json and evidence/latest-web-verification-report.txt preserve the verified run6851fe73-c93d-4849-9213-4bb5e60e1f74, two actual SQL/inference runs, matching Runtime receipts, cold recall0→warm2 and separate-process recall2. 50 focused tests, type checking and webpack build passed on the developer PC. The app restarted while the worker stayed alive. H-MEM is a custom subset, not full conformance, crash recovery or proven inference improvement. Runtime routing is Runtime-reported; its embedded-key signature check is not vendor-pinned trust or a packet capture.
 
-```powershell
-python src/meterless_demo/server.py
-```
+Operational screenshots, account-management utilities, all build/runtime folders, real .env files and credentials are excluded. The synthetic demo contact address was sanitized. Required app, sponsor, setup and test code is retained. Historical docs inside snapshots may describe earlier states; this README and the safe evidence are the current review guidance.
 
-Open http://127.0.0.1:8768/. Click **Zetaris 구매 기준 불러오기** (load Zetaris buyer criteria), then **샘플 PDF 3개로 실행** (run 3 sample PDFs). For your own supported text PDFs use the file chooser and **선택한 PDF 분석**. The interface is Korean; the generated supplier inquiries are English.
+## Publication and attribution
 
-When Zetaris mode is selected, the server fetches policy values again at analysis start and rejects a failed lookup. It never trusts the browser to label manual values as Zetaris data. Editing any criterion switches to manual mode and hides previous results. The exported JSON includes criteria, source, policy ID, SQL, request ID and fetch time. The criteria digest uses Python JSON with float-normalized values; it is not a portable signed integrity proof.
+Existing public repository: https://github.com/atras-kim/atlasgori-ai . Its current published main contains the earlier PDF demo, not this proposed update. The submission page was observed as Submitted1/1 on 27 October. This local Wildcard revision has NOT been uploaded, used to change track, or saved to that submission. Owner approval is required before those changes.
 
-Expected synthetic results: A USD 20,880 with unconfirmed logistics assumptions and shipment 28 days; B USD 21,100 quoted CIF and shipment 14 days; C total unconfirmed due to MOQ/conditions. B is the priority negotiation candidate, subject to human confirmation. Download CSV or JSON and review each supplier's English draft. Nothing sends automatically.
-
-## Tests
-
-```powershell
-python -m pip install -r requirements-dev.txt
-python -m unittest discover -s tests -p "test_*.py"
-node tests/test_meterless_followups.cjs
-```
-
-`tests/meterless_live.py` is optional and requires the running app, vendor runtimes and a local model; it makes real inference calls. Unit tests use synthetic fixtures and mocked HTTP. A historical integration run included in `evidence/` used three real Meterless HTTP 200 local-only calls, each reporting cost USD 0. No quality or speed claim beyond that run is implied.
-
-## Limits and safety
-
-Text PDFs only, at most 3 MB and 10 pages each, extracted text up to 6,500 characters. No scanned OCR, FX conversion or arbitrary document guarantees. Source labels outside the supported pattern remain unverified. Comparison covers goods, ocean freight and insurance only; taxes, customs, destination charges and domestic transport are excluded. Shipment is not arrival. Demo logistics assumptions are not confirmed supplier charges.
-
-Files are parsed in memory by this server; Meterless's own retention settings are separate. Run records are memory-only and disappear on restart. Saved evidence is historical and is not loaded as a successful live result. The app validates Host, origin and a page token, binds loopback, and does not expose credentials or arbitrary SQL. Never expose this development server publicly.
-
-## Build attribution and prior work
-
-Jongmyoung Kim supplies trade/procurement workflow expertise and validation. Codex assisted source implementation, tests and submission materials. The custom upload workflow, validation rules, Zetaris policy integration and inquiry drafts were developed in the hackathon preparation conversation during the build window. Declare any additional pre-existing product code before submission if applicable. Python, pypdf, Node.js, Meterless, Zetaris and Llama are existing third-party components governed by their own licences. No Cursor use, NVIDIA-specific integration, Nemotron use, real supplier validation or live customer deployment is claimed.
-
-## Licence and publication status
-
-No open-source licence has been selected. Public visibility does not itself grant an open-source licence. The source is published at https://github.com/atras-kim/atlasgori-ai with owner approval. Final hackathon submission is still pending.
+Jongmyoung Kim supplies product and trade-workflow direction. Codex assisted implementation and materials. Pre-existing application code is declared; only the identified new work should be evaluated as the hackathon extension. Vendor runtimes, models and libraries retain their own licences. No repository-wide open-source licence has been selected. No Cursor, NVIDIA-specific or Nemotron integration is claimed.

@@ -1,0 +1,146 @@
+/* ATLAS visual system: calm surfaces, clear typography, indigo accents. */
+:root {
+  --navy: #5145cd;
+  --navy2: #4036aa;
+  --ink: #25243d;
+  --muted: #6d7286;
+  --line: #e7e8f0;
+  --bg: #f5f6fa;
+  --amber: #7965e9;
+  --blue: #5747c7;
+}
+body { font-family: "Segoe UI", "Malgun Gothic", sans-serif; -webkit-font-smoothing: antialiased; }
+button, a, input, select, textarea { transition: background .18s, border-color .18s, box-shadow .18s; }
+.sidebar { background: #fdfdff; color: #62647a; border-right: 1px solid var(--line); padding-top: 32px; }
+.brand { color: #292641; letter-spacing: 2px; font-size: 27px; }
+.brand-mark { background: linear-gradient(145deg,#8875f4,#5145cd); border: 0; color: white; width: 36px; height: 36px; line-height: 36px; border-radius: 11px; box-shadow: 0 5px 12px #6250d42b; }
+.brand-dot { color: #8a83a4; }
+.workspace-label { color: #88869d; letter-spacing: 2px; margin-top: 10px; }
+.org { background: #f5f4fc; border-color: #e9e6f6; color: #39334f; border-radius: 12px; }
+.org small { color: #767187; }
+.org-icon { background: #e2dcfa; color: #6050b9; border-radius: 8px; }
+.nav-item { padding: 13px; border-radius: 10px; font-weight: 500; }
+.nav-item.active, .nav-item.active:hover { background: #eeeafb; color: #5842bc; font-weight: 700; }
+.nav-item.active svg { color: #6c50d5; }
+.nav-item:hover, .project-nav button:hover { background: #f3f1f9; }
+.count { background: #ded6f8; color: #5940ac; border-radius: 6px; }
+.nav-section { color: #8a879d; }
+.project-nav button { color: #626077; border-radius: 8px; font-size: 13px; padding-top: 11px; padding-bottom: 11px; }
+.color-0 { background: #e9e0ff; color: #8054bd; }
+.color-1 { background: #d9efed; color: #348779; }
+.color-2 { background: #ffead7; color: #bb8147; }
+.private-note { color: #78758d; background: #f5f4fa; border-radius: 12px; margin-bottom: 14px; }
+.private-note small { color: #7e7b91; }
+.profile { border-top-color: var(--line); color: #444158; }
+.avatar { background: #eee7fc; color: #755ab7; }
+.topbar { background: #ffffffd9; height: 72px; }
+.breadcrumb { color: #727184; font-size: 12px; }
+.fx { gap: 10px; color: #626178; }
+.fx strong { color: #302943; font-variant-numeric: tabular-nums; }
+.fx button { background: #f3f1fa; padding: 6px 9px; border-radius: 7px; }
+.demo-banner { background: #f0edf9; color: #72638f; border-bottom-color: #e9e3f4; padding-top: 10px; padding-bottom: 10px; }
+.demo-banner b { background: #e2daf4; color: #68528d; }
+.page-heading { padding-top: 36px; padding-bottom: 28px; }
+.eyebrow { color: #8b7abb; letter-spacing: 1.6px; }
+.page-heading h1 { font-size: 34px; letter-spacing: -1.5px; margin: 7px 0; }
+.page-heading p { color: #727387; font-size: 14px; }
+.heading-dot { width: 8px; height: 8px; background: #a393e5; }
+.button { border-radius: 10px; min-height: 42px; padding: 10px 16px; font-weight: 600; box-shadow: 0 2px 3px #26204204; }
+.button.primary { background: #6250d4; border-color: #6250d4; box-shadow: 0 4px 10px #6250d426; }
+.button.primary:hover { background: #5140bb; border-color: #5140bb; }
+input, select, textarea { border-radius: 10px; border-color: #deddea; }
+input:focus, textarea:focus, select:focus { outline: 2px solid #b7a8ee; outline-offset: 1px; }
+.surface, .project-directory, .brief, .sharing, .sourcing-intro, .source-card { border-radius: 16px; box-shadow: 0 5px 22px #28204404; }
+.inbox-toolbar { border: 1px solid var(--line); background: #fff; border-radius: 16px 16px 0 0; padding: 4px 20px; }
+.tabs .selected { border-bottom-color: #7660da; color: #6250c2; }
+.search { background: #f6f5fa; border-radius: 8px; padding: 6px 10px; }
+.inbox-grid { border-radius: 0 0 16px 16px; box-shadow: 0 8px 24px #29214405; }
+.mail-list { background: #fcfcfe; }
+.list-label { color: #7c788d; font-size: 10px; }
+.mail-card { padding-top: 22px; padding-bottom: 22px; }
+.mail-card.selected { background: #f0edfc; border-left-color: #8063dc; }
+.mail-card:hover { background: #f6f3fc; }
+.mail-card-top { font-size: 12px; }
+.mail-card-top span { color: #777587; }
+.mail-card h3 { font-size: 14px; }
+.mail-card p { font-size: 12px; color: #75758b; }
+.unread-dot { background: #8164dd; }
+.tag { background: #eee8fb; color: #7753a4; border-radius: 6px; }
+.account-tag { background: #edf3f4; color: #527780; border-radius: 6px; }
+.mail-detail { padding: 30px; }
+.mail-detail h2 { font-size: 24px; letter-spacing: -.7px; }
+.detail-meta { color: #78778a; }
+.sender-row { font-size: 13px; }
+.sender-row small { color: #78778a; font-size: 11px; }
+.classification { background: #f6f3fc; border-color: #ece6f8; border-radius: 10px; color: #786797; padding: 12px; }
+.mail-body { color: #4a4b60; font-size: 15px; }
+.attachment { background: #faf9fd; border-radius: 10px; }
+.project-layout { gap: 26px; grid-template-columns: 280px minmax(0,1fr); }
+.project-directory > .section-heading { padding-bottom: 6px; }
+.project-row { padding: 23px 20px; }
+.project-row.selected { background: #f1edfc; box-shadow: inset 3px 0 #8a6bdd; }
+.project-row:hover { background: #f7f4fc; }
+.project-row strong { font-size: 14px; }
+.project-row small { color: #777489; font-size: 12px; }
+.project-icon { width: 42px; height: 46px; border-radius: 13px; }
+.directory-note { background: #faf9fd; color: #78748a; }
+.project-heading { padding: 4px 0 6px; }
+.project-heading h2 { font-size: 26px; letter-spacing: -.9px; margin-top: 7px; }
+.brief { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 14px; padding: 22px; }
+.brief-title, .brief-status, .brief-sources, .brief > .empty-state { grid-column: 1 / -1; }
+.brief-title { padding: 0 0 17px; align-items: center; }
+.brief-title > span { font-size: 16px; }
+.brief-title svg { color: #9374d9; }
+.brief-title small { color: #7b748e; }
+.brief-status { background: linear-gradient(110deg,#f0ebfc,#f8f6fe); border: 1px solid #ebe4f9; border-radius: 12px; padding: 22px; }
+.brief-status > span { color: #8570b4; font-size: 10px; }
+.brief-status h3 { font-size: 20px; line-height: 1.65; color: #4b396c; }
+.brief-section { border: 1px solid #ecebf2; border-radius: 12px; padding: 20px; background: #fdfdff; }
+.brief-section h4 { font-size: 14px; margin-bottom: 14px; }
+.brief-section ul { color: #68667b; line-height: 1.85; padding-left: 17px; }
+.brief-section.risks { background: #fffcf7; border-color: #f0e7d8; }
+.brief-section.risks h4 { color: #9d743b; }
+.brief-section.actions { background: #f6fbf9; border-color: #dceee6; }
+.brief-section.actions h4 { color: #3b8570; }
+.brief-sources { padding: 14px 0 0; color: #706b83; }
+.brief-sources p { background: #f6f5fa; padding: 7px 11px; border-radius: 7px; }
+.sharing { color: #6b647d; padding: 20px 24px; }
+.sourcing-intro { background: radial-gradient(ellipse at 50% 0%,#f0eafa,white 75%); padding-top: 56px; padding-bottom: 44px; }
+.sourcing-icon { background: #eae2fa; color: #8b68c1; border-radius: 19px; }
+.sourcing-intro h2 { font-size: 30px; letter-spacing: -1px; }
+.sourcing-intro > p { color: #777187; font-size: 14px; }
+.sourcing-search { background: white; border-color: #dcd3ee; border-radius: 14px; box-shadow: 0 8px 28px #67508a0d; }
+.suggestions button { background: #f0ecf7; color: #7b6996; border-radius: 20px; padding: 8px 14px; }
+.workspace-footer { color: #807d90; }
+@media (max-width: 1150px) {
+  .project-layout { grid-template-columns: 230px minmax(0,1fr); gap: 20px; }
+  .brief { padding: 18px; gap: 12px; }
+  .brief-section { padding: 16px; }
+  .mail-detail { padding: 24px; }
+}
+@media (max-width: 1000px) {
+  .brief { grid-template-columns: minmax(0,1fr); }
+}
+@media (max-width: 900px) {
+  .project-layout { grid-template-columns: minmax(0,1fr); }
+  .project-directory { max-height: 290px; }
+}
+@media (max-width: 650px) {
+  .topbar { height: 58px; }
+  .page-heading { padding-top: 26px; }
+  .page-heading h1 { font-size: 28px; }
+  .page-heading p { font-size: 12px; }
+  .inbox-toolbar { padding: 4px 12px 10px; }
+  .search { border: 0; }
+  .mail-detail { padding: 20px; }
+  .mail-detail h2 { font-size: 21px; }
+  .project-heading h2 { font-size: 22px; }
+  .brief { padding: 16px; }
+  .brief-status { padding: 18px; }
+  .brief-status h3 { font-size: 18px; }
+  .sourcing-intro h2 { font-size: 24px; }
+  .sidebar.mobile-open { background: #fdfdff; }
+}
+@media (prefers-reduced-motion: reduce) {
+  button, a, input, select, textarea { transition: none; }
+}

@@ -1,0 +1,301 @@
+.project-layout {
+  display: grid;
+  grid-template-columns: 310px 1fr;
+  margin: 0 34px 20px;
+  gap: 20px;
+}
+.project-directory {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #fff;
+  overflow: hidden;
+  align-self: start;
+}
+.project-directory > .section-heading {
+  padding: 22px 20px 0;
+}
+.project-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 20px;
+  width: 100%;
+  text-align: left;
+  border-top: 1px solid var(--line);
+}
+.project-row.selected {
+  background: #f2f6f8;
+}
+.project-row > div {
+  flex: 1;
+  min-width: 0;
+}
+.project-row strong {
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+.project-row small {
+  display: block;
+  font-size: 11px;
+  margin: 4px 0 7px;
+}
+.project-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 40px;
+  border-radius: 7px;
+  flex-shrink: 0;
+}
+.directory-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 20px;
+  border-top: 1px solid var(--line);
+  color: #8595a2;
+}
+.directory-note p {
+  font-size: 11px;
+  margin: 0;
+}
+.project-content {
+  min-width: 0;
+}
+.project-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2px 0 20px;
+  gap: 12px;
+}
+.project-heading h2 {
+  margin: 3px 0 8px;
+}
+.project-heading p {
+  font-size: 12px;
+  color: #8a98a4;
+  margin: 0;
+}
+.brief {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.brief-title {
+  display: flex;
+  justify-content: space-between;
+  padding: 17px 24px;
+  border-bottom: 1px solid var(--line);
+  gap: 12px;
+}
+.brief-title > span {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-weight: bold;
+  font-size: 14px;
+}
+.brief-title svg {
+  color: #b58938;
+}
+.brief-title small {
+  font-size: 10px;
+}
+.brief-status {
+  padding: 24px;
+  background: #fafbf9;
+}
+.brief-status > span {
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  color: #8c9a92;
+}
+.brief-status h3 {
+  margin: 8px 0 0;
+  font-size: 17px;
+}
+.brief-section {
+  padding: 18px 24px;
+  border-top: 1px solid #f0f2f4;
+}
+.brief-section h4 {
+  margin: 0 0 10px;
+}
+.brief-section ul {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 13px;
+  color: #677c8b;
+}
+.brief-section li + li {
+  margin-top: 6px;
+}
+.brief-section.risks h4 {
+  color: #ad8131;
+}
+.brief-section.actions h4 {
+  color: #347292;
+}
+.brief-section p {
+  font-size: 12px;
+  color: #91a1ad;
+  margin: 0;
+}
+.brief-sources {
+  padding: 20px 24px;
+  border-top: 1px solid var(--line);
+  font-size: 11px;
+  color: #8595a2;
+}
+.brief-sources p {
+  margin: 6px 0;
+}
+.sharing {
+  margin-top: 20px;
+  padding: 18px 22px;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+.sharing summary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 13px;
+}
+.sharing label {
+  margin-top: 14px;
+}
+.sharing p,
+.sharing small {
+  font-size: 11px;
+}
+.sharing .row {
+  margin: 10px 0;
+}
+.inline-form {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #f8fafb;
+}
+.accounts-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 22px;
+  margin: 0 34px 25px;
+}
+.account-row {
+  display: flex;
+  gap: 14px;
+  padding: 22px 0;
+  border-top: 1px solid var(--line);
+}
+.account-row > div {
+  min-width: 0;
+}
+.account-row b {
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+.account-row p {
+  font-size: 11px;
+  color: #94a1aa;
+  margin: 5px 0 14px;
+}
+.account-row small {
+  display: block;
+  font-size: 10px;
+  margin: 7px 0;
+}
+.account-row .row {
+  flex-wrap: wrap;
+}
+.provider-logo {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 37px;
+  height: 37px;
+  border-radius: 8px;
+  background: #f0f4f6;
+  flex-shrink: 0;
+  color: #4b7790;
+}
+.provider-logo.naver {
+  background: #e8f6ed;
+  color: #349566;
+}
+.provider-logo.gmail {
+  background: #fff0eb;
+  color: #cb7056;
+}
+.provider-logo.outlook {
+  background: #e7f1fa;
+  color: #4487bd;
+}
+.check-label {
+  flex-direction: row;
+  align-items: center;
+  font-size: 11px;
+}
+.check-label input {
+  accent-color: var(--navy);
+}
+.provider-connect {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  gap: 12px;
+  width: 100%;
+  padding: 15px 0;
+  border-bottom: 1px solid var(--line);
+}
+.provider-connect > div {
+  flex: 1;
+}
+.provider-connect b {
+  font-size: 13px;
+}
+.provider-connect small {
+  display: block;
+  font-size: 11px;
+}
+.provider-connect.disabled {
+  opacity: 0.65;
+}
+.divider {
+  margin: 25px 0 20px;
+  font-size: 12px;
+  color: #8697a4;
+}
+.accounts-grid form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.help-text {
+  font-size: 12px;
+  color: #8799a6;
+  line-height: 1.8;
+}
+.setup-note {
+  border-top: 1px solid var(--line);
+  margin-top: 25px;
+  padding-top: 20px;
+  font-size: 12px;
+  color: #6b8192;
+}
+.setup-note p {
+  margin: 5px 0;
+  font-size: 11px;
+}
+.danger {
+  color: #a2645d;
+}

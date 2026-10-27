@@ -1,0 +1,45 @@
+{
+  "name": "atlas-workspace",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --hostname 127.0.0.1 --port 4317",
+    "build": "next build",
+    "start": "next start --hostname 127.0.0.1 --port 4317",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test tests/*.test.ts",
+    "setup:init": "node scripts/setup-check.mjs --init",
+    "setup:check": "node scripts/setup-check.mjs",
+    "test:sponsors": "tsx --test tests/sponsor-*.test.ts tests/meterless-memory.test.ts",
+    "verify:sponsors": "tsx scripts/verify-sponsors.ts",
+    "dev:sponsor-worker": "tsx scripts/sponsor-worker.ts",
+    "verify:sponsor-worker": "tsx scripts/verify-worker-flow.ts"
+  },
+  "dependencies": {
+    "@supabase/ssr": "0.12.7",
+    "@supabase/supabase-js": "2.117.2",
+    "exceljs": "4.4.0",
+    "imapflow": "2.1.0",
+    "jszip": "3.10.1",
+    "lucide-react": "1.48.0",
+    "mailparser": "3.9.29",
+    "mammoth": "1.13.0",
+    "next": "16.3.6",
+    "nodemailer": "10.0.11",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "unpdf": "1.8.1",
+    "zod": "4.6.5"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "^0.5.8",
+    "@types/mailparser": "3.4.6",
+    "@types/node": "26.6.3",
+    "@types/nodemailer": "8.0.2",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "prettier": "^3.9.9",
+    "tsx": "4.23.15",
+    "typescript": "7.0.2"
+  }
+}

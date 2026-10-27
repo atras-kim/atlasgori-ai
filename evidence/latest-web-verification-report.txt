@@ -1,0 +1,69 @@
+ATLASGORI isolated development candidate: live web flow verification
+Date: 2026-10-27 (Asia/Seoul)
+Candidate: C:/AI/Ruflo-HQ/src/atlas-live-candidate
+Evidence: candidate/.runtime/web-verification/6851fe73-c93d-4849-9213-4bb5e60e1f74/receipt.json
+
+Outcome: PASS for the local web HTTP workflow with synthetic authentication dependency.
+Production and security settings unchanged. Not deployed.
+
+Change:
+Bounded Meterless output adaptation accepts exactly one selected or supplier_id
+field, optionally wrapped in one complete JSON code fence. The key is canonicalized.
+Wrong selections, prose, arrays, duplicate keys, extra keys and oversized output
+are rejected. It does not extract arbitrary JSON or repair model values.
+The current asynchronous web/worker architecture and authorization are preserved.
+
+Isolation:
+The shared candidate changed during work. Its earlier execution evidence is not
+used for this conclusion. A new standalone source snapshot was taken; all final
+changes and verification are confined to atlas-live-candidate.
+Dependencies use the existing installation through a local node_modules junction.
+No installation, production configuration or credential file was copied.
+
+Validation:
+50 sponsor/memory/worker tests passed. Type check passed.
+Next.js 16.3.6 webpack application build passed.
+Actual Next server rendered /sponsor-demo under the synthetic operator session.
+POST /api/sponsor-demo returned 202; GET polling returned succeeded twice.
+The actual private worker queue and shared scenario service were used.
+Zetaris local UI proxy executed fixed SELECT UNION ALL and returned exact 2 rows.
+Meterless actually consumed those rows and selected SYNTH-PAPER-002 twice.
+Both responses matched Runtime receipts with local-only/local routing and egress
+destination none. Runtime reported actual cost USD 0 for both requests.
+Embedded-public-key receipt signature verification passed; this is not a
+vendor-pinned trust assertion or independent network packet capture.
+
+H-MEM subset:
+First request priorRecallCount 0, recallCount 2; ledger entries 4.
+After Next web process restart: priorRecallCount 2, recallCount 2; ledger entries 6.
+After web, worker and queue shutdown, a separate child process recalled 2 fixed
+synthetic records. Journal hash retained in the evidence.
+This verifies normal file persistence across processes, not crash recovery,
+full H-MEM conformance or inference improvement from memory.
+
+Boundaries:
+Authentication/membership/rate-limit database was a private loopback fixture using
+synthetic users. App auth code and gates were unchanged. Real Supabase login and
+deployed-site/browser-click behavior are not verified by this HTTP harness.
+Unauthenticated 401, non-operator 403, foreign origin 403, rate limit 429 and
+unauthorized worker 401 were verified.
+The worker remained alive during Next restart; whole-worker restart recovery is
+not claimed. The tested Zetaris route is local UI proxy, not official cloud REST.
+
+Source/build binding:
+sourceUnchanged=true during final execution.
+Source manifest SHA256: 4acab426c74a48b52d763b18948ae19748864681fdd62724a6e41fbbb689735c
+Build ID: ycpEQa53Pmo-2BaaZAby-
+Safe receipt contains route/page build artifact hashes and full source manifest.
+
+Policy decision:
+ALLOW isolated development edits and synthetic local requests under the user's
+explicit authorization. Production access/change, security changes, deployment,
+real customer data, mail and attachments remain outside scope and were not used.
+Test Next/fixture/worker processes were stopped after verification; existing
+Zetaris and Meterless services were not reconfigured or stopped.
+
+Independent gates:
+Verification PASS: 622 source hashes, build ID, route/page artifact hashes and
+journal hash match. Recomputed 9 journal frames and 7 ledger entries, including
+append-only prefix and hash links, passed. Reviewer PASS within the stated scope.

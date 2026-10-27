@@ -1,0 +1,121 @@
+{
+  "schema": "atlas-submission-evidence-v1",
+  "verifiedAt": "2026-10-27T07:56:16.677Z",
+  "scenario": "separate fixed synthetic paper-packaging suppliers",
+  "auth": "local synthetic Supabase dependency fixture, not real Supabase",
+  "zetaris": "actual local UI proxy SQL, not official cloud REST",
+  "hmem": "custom contract-based subset, not full conformance",
+  "runId": "6851fe73-c93d-4849-9213-4bb5e60e1f74",
+  "status": "PASS",
+  "checks": {
+    "workerUnauthorized": 401,
+    "page200": true,
+    "unauthenticated": 401,
+    "foreignOrigin": 403,
+    "nonOperator": 403,
+    "processRestart": true,
+    "rateLimited": 429
+  },
+  "first": {
+    "verification": "live-synthetic-services",
+    "runId": "bd00b15d-e2f8-4364-a87f-8ee66007c414",
+    "zetarisRows": 2,
+    "selected": "SYNTH-PAPER-002",
+    "model": "local-runtime/llama-3.2-3b-instruct",
+    "serverRequestId": "chatcmpl-f564aadf-8f3d-4c6f-bbec-16e67bc07740",
+    "localOnly": true,
+    "signatureValidWithEmbeddedKey": true,
+    "memory": {
+      "implementation": "local-hmem-subset",
+      "priorRecallCount": 0,
+      "recallCount": 2,
+      "persistedAcrossInstances": true
+    }
+  },
+  "second": {
+    "verification": "live-synthetic-services",
+    "runId": "bab2eca6-6b44-42d0-ae50-c1797797df5a",
+    "zetarisRows": 2,
+    "selected": "SYNTH-PAPER-002",
+    "model": "local-runtime/llama-3.2-3b-instruct",
+    "serverRequestId": "chatcmpl-0e364f24-eed5-482a-81dd-684d1fa3db0a",
+    "localOnly": true,
+    "signatureValidWithEmbeddedKey": true,
+    "memory": {
+      "implementation": "local-hmem-subset",
+      "priorRecallCount": 2,
+      "recallCount": 2,
+      "persistedAcrossInstances": true
+    }
+  },
+  "runtimeTraffic": [
+    {
+      "requestId": "chatcmpl-f564aadf-8f3d-4c6f-bbec-16e67bc07740",
+      "receiptId": "rcpt_req_7h3r7dt9",
+      "status": "ok",
+      "privacy": "local-only",
+      "egress": "none",
+      "route": {
+        "kind": "local",
+        "label": "Llama 3.2 3B (Runtime GGUF)",
+        "model": "local-runtime/llama-3.2-3b-instruct",
+        "provider": "local-runtime",
+        "tier": "A"
+      },
+      "usage": {
+        "input_tokens": 146,
+        "latency_ms": 368,
+        "output_tokens": 20,
+        "output_tps": 54.34782608695652,
+        "total_tokens": 166
+      },
+      "actualCostUsd": 0
+    },
+    {
+      "requestId": "chatcmpl-0e364f24-eed5-482a-81dd-684d1fa3db0a",
+      "receiptId": "rcpt_req_gmrj8cz2",
+      "status": "ok",
+      "privacy": "local-only",
+      "egress": "none",
+      "route": {
+        "kind": "local",
+        "label": "Llama 3.2 3B (Runtime GGUF)",
+        "model": "local-runtime/llama-3.2-3b-instruct",
+        "provider": "local-runtime",
+        "tier": "A"
+      },
+      "usage": {
+        "input_tokens": 146,
+        "latency_ms": 183,
+        "output_tokens": 20,
+        "output_tps": 109.2896174863388,
+        "total_tokens": 166
+      },
+      "actualCostUsd": 0
+    }
+  ],
+  "memoryProcess": {
+    "implementation": "local-hmem-subset",
+    "recallCount": 2,
+    "fixedSyntheticIdsOnly": true
+  },
+  "sourceSha256": "4acab426c74a48b52d763b18948ae19748864681fdd62724a6e41fbbb689735c",
+  "buildId": "ycpEQa53Pmo-2BaaZAby-",
+  "buildArtifacts": {
+    "server/app/api/sponsor-demo/route.js": "f215abfa0740025e754eaa4a550cbe02144ca9ef18ad2fb3bd0de06075fb6335",
+    "server/app/sponsor-demo/page.js": "ba0acdc986d2ff92bcab2c5b8988c29fa92aea110cc89df1576192fff57bb150"
+  },
+  "sourceUnchanged": true,
+  "tests": {
+    "sponsor": 50,
+    "typecheck": "PASS",
+    "webpackBuild": "PASS"
+  },
+  "limits": [
+    "No browser-click UI test",
+    "Worker remained alive during web restart",
+    "Runtime routing is vendor-runtime reported, not packet capture",
+    "Receipt signature checked against embedded key, not vendor-pinned trust",
+    "No production deployment or security configuration changes"
+  ]
+}

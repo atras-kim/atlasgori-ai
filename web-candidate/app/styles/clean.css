@@ -1,0 +1,102 @@
+/* Quiet surfaces and one accent color; viewport behavior lives in desktop.css. */
+:root {
+  --ink:#233047;
+  --muted:#64748b;
+  --line:#e5e9ef;
+  --bg:#f5f6f8;
+  --blue:#2563eb;
+  --navy:#2563eb;
+}
+body,.main { background:var(--bg); }
+button:focus-visible,a:focus-visible,summary:focus-visible {
+  outline:2px solid #598cf3; outline-offset:3px;
+}
+.sidebar { background:#14243a; border-right:1px solid #26364a; }
+.brand { font-size:24px; letter-spacing:3px; font-weight:650; }
+.brand-mark { background:#356ce6; border-radius:9px; box-shadow:none; }
+.sidebar .workspace-label { color:#a2b1c6; font-size:10px; margin-top:9px; margin-bottom:28px; }
+.sidebar .nav-item { color:#c5cfdd; border-radius:8px; font-size:13px; padding:12px; }
+.sidebar .nav-item.active,.sidebar .nav-item.active:hover {
+  background:#263e60; color:#fff; box-shadow:none;
+}
+.sidebar .nav-item.active svg { color:#9ec0ff; }
+.sidebar .count { background:#42628b; font-size:11px; }
+.sidebar .nav-section { color:#92a4bd; font-size:10px; letter-spacing:.7px; margin-top:26px; }
+.sidebar-accounts button { color:#c5cfdd; padding-top:9px; padding-bottom:9px; }
+.sidebar .project-nav button { color:#c5cfdd; font-size:12px; padding-top:10px; padding-bottom:10px; }
+.project-square { background:#9caec4; width:12px; height:10px; }
+.profile .avatar { background:#30455f; color:#d6e3f5; }
+.topbar { background:#fff; border-bottom:1px solid var(--line); }
+.breadcrumb { color:#66758b; font-size:11px; }
+.fx { color:#65738a; }
+.fx strong { color:#26354b; font-weight:650; }
+.fx button { background:#f5f7fa; color:#52637e; border:1px solid var(--line); }
+.demo-banner { background:#f5f6f8; color:#65738a; border-bottom:0; font-size:11px; }
+.demo-banner b { color:#64748b; background:#e7ebf0; border-radius:4px; }
+.page-heading,.dashboard-shell .page-heading { padding-top:15px; padding-bottom:15px; }
+.page-heading h1,.dashboard-shell .page-heading h1 { font-size:22px; letter-spacing:-.6px; font-weight:700; }
+.heading-dot { display:none; }
+.button { border-radius:8px; border-color:#dce2ea; box-shadow:none; font-weight:600; }
+.button.primary { background:#2563eb; border-color:#2563eb; box-shadow:none; }
+.button.primary:hover { background:#1d4ed8; border-color:#1d4ed8; }
+input,textarea,select { border-color:#dfe5ed; border-radius:7px; }
+input:focus,textarea:focus,select:focus { outline-color:#7b9de9; }
+.reference-dashboard { gap:14px; }
+.dashboard-center { background:#fff; border:1px solid var(--line); border-radius:10px; padding:16px 0 0; }
+.dashboard-project-heading { margin:0 16px 12px; min-height:30px; }
+.dashboard-project-heading > svg { fill:#dce7fc; stroke:#718bbd; width:20px; }
+.dashboard-project-heading select { font-size:16px; font-weight:650; letter-spacing:-.3px; color:#27374f; }
+.quick-sourcing { margin:0 16px 14px; border:1px solid #e3e8f0; border-radius:7px; padding:10px 12px; box-shadow:none; background:#f9fafc; }
+.quick-sourcing .quick-title b { color:#566981; font-size:12px; font-weight:600; }
+.quick-title svg { color:#6a84ad; }
+.dashboard-mail-tools { padding:0 16px; gap:8px; }
+.dashboard-mail-tools .tabs { gap:16px; }
+.dashboard-mail-tools .tabs button { font-size:12px; }
+.dashboard-mail-tools select { font-size:11px; max-width:125px; background:#fff; }
+.dashboard-search { background:#f5f7fa; margin:10px 16px 12px; border:1px solid #edf0f4; border-radius:7px; }
+.dashboard-search input { padding:9px 0; font-size:12px; }
+.dashboard-mail-rows { border:0; border-top:1px solid var(--line); border-radius:0; }
+.dashboard-mail-row { padding:16px 14px; border-bottom:1px solid #eef1f5; border-left:3px solid transparent; gap:8px; }
+.dashboard-mail-row:hover { background:#f8fafc; }
+.dashboard-mail-row[aria-pressed="true"] { background:#eff5ff; border-left-color:#3475e8; }
+.dashboard-mail-row .avatar { background:#edf1f6; color:#60718c; font-weight:600; font-size:11px; width:30px; height:30px; }
+.dashboard-mail-row[aria-pressed="true"] .avatar { background:#dae7ff; color:#3764aa; }
+.row-sender b { font-size:12px; font-weight:600; color:#26364d; }
+.row-message b { font-size:12px; font-weight:500; color:#3c4b62; }
+.is-unread .row-message b { font-weight:650; color:#22334d; }
+.row-message small { color:#78869b; font-size:11px; line-height:1.6; }
+.row-time { color:#718096; font-size:10px; }
+.row-time small { font-size:10px; color:#617eaa; }
+.dashboard-right { border-color:var(--line); border-radius:10px; box-shadow:none; }
+.desk-panel-tabs { gap:8px; padding:8px 14px; border-color:var(--line); }
+.desk-panel-tabs button { padding:8px 10px; font-size:12px; border:0; border-radius:6px; color:#64748b; }
+.desk-panel-tabs button[aria-pressed="true"] { background:#edf3ff; color:#255ac0; font-weight:650; border:0; }
+.desk-reader .mail-reading-content { padding:22px; }
+.desk-reader .detail-meta { font-size:11px; color:#6e7d92; margin-bottom:18px; }
+.tag { background:#f0f3f8; color:#5b6f8d; border-radius:5px; }
+.desk-reader .mail-detail h2 { font-size:19px; line-height:1.5; letter-spacing:-.4px; font-weight:650; margin-bottom:20px; }
+.sender-row .avatar { background:#edf1f6; color:#60718c; }
+.sender-row strong { font-weight:600; font-size:12px; }
+.classification { background:#f8fafc; border:1px solid #e8edf3; border-radius:7px; color:#64748b; padding:10px; }
+.classification select { color:#53657d; }
+.desk-reader .mail-body { font-size:13px; line-height:1.75; color:#3f4e64; padding-top:20px; }
+.attachment { box-shadow:none; border-radius:7px; background:#fafbfd; border-color:#e4e9f0; }
+.desk-reader .reply-bar,.desk-compose .composer-footer { background:#fff; border-top:1px solid var(--line); }
+.reply-bar .text-button { font-size:11px; color:#627895; }
+.desk-compose .panel-title { padding-top:18px; padding-bottom:16px; }
+.desk-compose .panel-title h2 { font-size:16px; }
+.desk-compose .composer-body label { font-size:12px; color:#5b6c84; }
+.desk-compose .composer-body input,.desk-compose .composer-body select { padding:10px; }
+.reply-suggestion { background:#f8faff; border-color:#e0e8f7; border-radius:9px; }
+.surface,.project-directory,.document-library,.sourcing-intro { box-shadow:none; border-color:var(--line); border-radius:10px; }
+@media(max-width:650px) {
+  .page-heading h1,.dashboard-shell .page-heading h1 { font-size:20px; }
+  .dashboard-center { padding-top:12px; }
+  .desk-reader .mail-reading-content { padding:16px; }
+  .desk-panel-tabs { gap:4px; padding:8px; }
+  .desk-panel-tabs button { padding:9px; }
+  .demo-banner { font-size:10px; }
+}
+@media(prefers-reduced-motion:reduce) {
+  button,a,input,select,textarea { transition:none; }
+}

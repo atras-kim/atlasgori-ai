@@ -1,0 +1,44 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {PGlite} from '@electric-sql/pglite';
+test('invitation atomicity, role isolation, suspension and quota reservation',async()=>{
+ const db=new PGlite(),owner='e4134a88-14e5-4c7d-ab0f-9dda958bd5bd',member='22222222-2222-4222-8222-222222222222';
+ try{
+ await db.exec(`create schema auth;create role anon;create role authenticated;create role service_role bypassrls;
+ create table auth.users(id uuid primary key,email text,created_at timestamptz default now(),raw_user_meta_data jsonb default '{}',email_confirmed_at timestamptz,last_sign_in_at timestamptz);
+ create function auth.uid() returns uuid language sql stable as $$select nullif(current_setting('request.jwt.claim.sub',true),'')::uuid$$;
+ grant usage on schema public,auth to authenticated,anon,service_role;grant execute on function auth.uid() to authenticated;
+ insert into auth.users(id,email)values('${owner}','owner@example.test');`);
+ for(const f of ['005_ai_usage.sql','009_sourcing_usage.sql','010_membership.sql'])await db.exec(readFileSync(new URL('../supabase/migrations/'+f,import.meta.url),'utf8'));
+ assert.equal((await db.query<{is_operator:boolean}>('select is_operator from app_members where id=$1',[owner])).rows[0].is_operator,true);
+ await assert.rejects(db.exec(`insert into auth.users(id,email)values('${member}','member@example.test')`),/invitation/i);
+ await db.exec(`insert into member_invites(email,token_hash,created_by,expires_at)values('member@example.test','hash','${owner}',now()+interval '7 days')`);
+ await assert.rejects(db.exec(`insert into auth.users(id,email,raw_user_meta_data)values('${member}','wrong@example.test','{"atlas_invite_hash":"hash"}')`),/invitation/i);
+ await db.exec(`insert into auth.users(id,email,raw_user_meta_data)values('${member}','member@example.test','{"atlas_invite_hash":"hash","is_operator":true}')`);
+ const fresh=(await db.query<{monthly_limit:number;is_operator:boolean}>('select * from app_members where id=$1',[member])).rows[0];assert.equal(Number(fresh.monthly_limit),0);assert.equal(fresh.is_operator,false);
+ await assert.rejects(db.exec(`insert into auth.users(id,email,raw_user_meta_data)values('33333333-3333-4333-8333-333333333333','member@example.test','{"atlas_invite_hash":"hash"}')`),/invitation/i);
+ await assert.rejects(db.query("select reserve_atlas_ai($1,'reply','test',10)",[member]),/QUOTA/);
+ await db.query("select manage_atlas_member($1,$2,'active',100)",[owner,member]);
+ const outcomes=await Promise.allSettled([db.query("select reserve_atlas_ai($1,'reply','test',80) as id",[member]),db.query("select reserve_atlas_ai($1,'reply','test',80) as id",[member])]);
+ assert.equal(outcomes.filter(r=>r.status==='fulfilled').length,1);
+ const reservation=(await db.query<{id:string}>('select id from ai_usage_events where owner_id=$1',[member])).rows[0].id;
+ await db.query("update ai_usage_events set status='unknown' where owner_id=$1",[member]);
+ await assert.rejects(db.query("select reserve_atlas_ai($1,'reply','test',21)",[member]),/QUOTA/);
+ await db.query("update ai_usage_events set status='reported',input_tokens=5,output_tokens=5,cached_tokens=0,total_tokens=10 where owner_id=$1",[member]);
+ await db.query("select reserve_atlas_ai($1,'reply','test',90)",[member]);
+ const pending=(await db.query<{id:string}>("select id from ai_usage_events where owner_id=$1 and status='pending'",[member])).rows[0].id;
+ await db.query('select settle_atlas_ai($1,$2,$3)',[member,pending,JSON.stringify({input_tokens:20,output_tokens:10,cached_tokens:0,total_tokens:30,response_id:'r-one'})]);
+ await db.query('select settle_atlas_ai($1,$2,$3)',[member,pending,JSON.stringify({input_tokens:99,output_tokens:0,cached_tokens:0,total_tokens:99})]);
+ assert.equal(Number((await db.query<{total_tokens:number}>('select total_tokens from ai_usage_events where id=$1',[pending])).rows[0].total_tokens),30);
+ await db.exec(`set role authenticated;set request.jwt.claim.sub='${member}';`);
+ assert.equal((await db.query('select * from ai_usage_events')).rows.length,2);
+ await assert.rejects(db.query("select manage_atlas_member($1,$2,'active',100000)",[member,member]),/permission/);
+ await assert.rejects(db.query('select * from member_audit'),/permission/);
+ await db.exec('reset role');await db.query("select manage_atlas_member($1,$2,'suspended',100)",[owner,member]);
+ await db.exec(`set role authenticated;set request.jwt.claim.sub='${member}';`);assert.equal((await db.query('select * from ai_usage_events')).rows.length,0);
+ await db.exec('reset role');await assert.rejects(db.query("select reserve_atlas_ai($1,'reply','test',1)",[member]),/inactive/);
+ await assert.rejects(db.query("select manage_atlas_member($1,$1,'suspended',100)",[owner]),/protected/);
+ assert.equal((await db.query("select * from member_audit where action='registered'")).rows.length,1);
+ }finally{await db.close();}
+});

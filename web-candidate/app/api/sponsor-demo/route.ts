@@ -1,0 +1,11 @@
+import {assertOrigin} from '@/lib/security';
+import {requireOperator} from '@/lib/membership';
+import {limit} from '@/lib/db';
+import {PrivateWorkerClient,readWorkerClientConfig} from '@/lib/sponsors/worker-client';
+import {createSponsorHandlers} from '@/lib/sponsors/web-controller';
+export const runtime='nodejs';
+export const maxDuration=15;
+const handlers=createSponsorHandlers({enabled:()=>process.env.ATLAS_SPONSOR_DEMO_ENABLED==='1',authorize:requireOperator,origin:assertOrigin,rateLimit:limit,client:()=>new PrivateWorkerClient(readWorkerClientConfig())});
+export const POST=handlers.POST;
+export const GET=handlers.GET;
+export const DELETE=handlers.DELETE;

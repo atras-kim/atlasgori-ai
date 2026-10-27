@@ -1,0 +1,356 @@
+.page-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px 34px 24px;
+  gap: 18px;
+}
+.eyebrow {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  color: #8c9aa6;
+}
+.page-heading h1 {
+  font-size: 30px;
+  letter-spacing: -1.3px;
+  margin: 5px 0 4px;
+  line-height: 1.4;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.heading-dot {
+  height: 7px;
+  width: 7px;
+  background: var(--amber);
+  border-radius: 50%;
+}
+.page-heading p {
+  color: var(--muted);
+  font-size: 13px;
+  margin: 0;
+}
+.heading-actions,
+.row {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  border: 1px solid #dae1e6;
+  border-radius: 6px;
+  padding: 9px 14px;
+  white-space: nowrap;
+  font-size: 13px;
+  min-height: 39px;
+}
+.button:hover {
+  background: #f4f7f9;
+}
+.button.primary {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: #fff;
+}
+.button.primary:hover {
+  background: #25445b;
+}
+.text-button {
+  font-size: 12px;
+  color: var(--blue);
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+.inbox-toolbar {
+  margin: 0 34px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+  gap: 12px;
+}
+.tabs {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+.tabs button {
+  padding: 14px 0;
+  font-size: 13px;
+}
+.tabs .selected {
+  border-bottom: 2px solid var(--navy);
+  font-weight: bold;
+}
+.tabs span {
+  margin-left: 8px;
+  color: var(--muted);
+  font-size: 11px;
+}
+.tabs select {
+  padding: 5px 10px;
+  font-size: 11px;
+  background: transparent;
+  border-color: transparent;
+}
+.search {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  color: #8b98a2;
+}
+.search input {
+  font-size: 12px;
+  background: transparent;
+  border: 0;
+  width: 210px;
+  padding: 5px;
+}
+.inbox-grid {
+  display: grid;
+  grid-template-columns: minmax(260px, 35%) minmax(0, 1fr);
+  margin: 0 34px 20px;
+  background: white;
+  border: 1px solid var(--line);
+  border-top: 0;
+  border-radius: 0 0 10px 10px;
+  min-height: 550px;
+  overflow: hidden;
+}
+.mail-list {
+  border-right: 1px solid var(--line);
+  background: #fdfefe;
+}
+.list-label {
+  padding: 17px 20px;
+  font-size: 9px;
+  color: #99a5ae;
+  letter-spacing: 1.5px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #f0f2f4;
+}
+.mail-card {
+  display: block;
+  padding: 19px 20px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  width: 100%;
+  position: relative;
+}
+.mail-card.selected {
+  background: #f0f5f8;
+  border-left: 3px solid #507891;
+  padding-left: 17px;
+}
+.mail-card:hover {
+  background: #f5f8fa;
+}
+.mail-card-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: center;
+  font-size: 11px;
+}
+.mail-card-top strong {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 80%;
+}
+.mail-card-top span {
+  font-size: 10px;
+  color: #9aa5ae;
+  white-space: nowrap;
+}
+.mail-card h3 {
+  font-size: 13px;
+  margin: 8px 0 5px;
+  line-height: 1.6;
+}
+.mail-card p {
+  font-size: 11px;
+  color: #93a0aa;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 12px;
+}
+.unread-dot {
+  display: inline-block;
+  height: 5px;
+  width: 5px;
+  background: #3c799f;
+  border-radius: 50%;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+.mail-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+.tag,
+.account-tag {
+  display: inline-block;
+  border-radius: 4px;
+  font-size: 10px;
+  padding: 2px 7px;
+  line-height: 1.6;
+  background: #eef2f5;
+  color: #657d8d;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+.tag {
+  background: #f5eddc;
+  color: #987b42;
+}
+.mail-detail {
+  padding: 24px 30px;
+  min-width: 0;
+}
+.detail-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+  font-size: 10px;
+  color: #9ca5ac;
+}
+.mail-detail h2 {
+  font-size: 21px;
+  line-height: 1.5;
+  margin-bottom: 18px;
+  overflow-wrap: anywhere;
+}
+.sender-row {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  font-size: 12px;
+  margin-bottom: 24px;
+}
+.sender-row strong {
+  overflow-wrap: anywhere;
+}
+.sender-row small {
+  display: block;
+  font-size: 10px;
+}
+.classification {
+  background: #f7f9fa;
+  border: 1px solid #edf0f2;
+  border-radius: 6px;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  color: #7b8e9c;
+}
+.classification select {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  font-size: 11px;
+  flex: 1;
+  max-width: 100%;
+}
+.mail-body {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font-size: 14px;
+  line-height: 1.9;
+  padding: 25px 0 22px;
+  min-height: 265px;
+}
+.attachments {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.attachment {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 10px 13px;
+  background: #fff;
+  font-size: 11px;
+  overflow-wrap: anywhere;
+}
+.attachment small {
+  display: block;
+  font-size: 10px;
+}
+.reply-bar {
+  border-top: 1px solid var(--line);
+  margin-top: 24px;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+.workspace-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 34px 25px;
+  font-size: 9px;
+  letter-spacing: 1px;
+  color: #a0abb5;
+}
+.workspace-footer span span {
+  margin: 0 6px;
+}
+.surface {
+  border: 1px solid var(--line);
+  background: white;
+  border-radius: 10px;
+  padding: 25px;
+}
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.section-heading h2 {
+  font-size: 17px;
+  margin: 0;
+}
+.section-heading select {
+  font-size: 12px;
+  padding: 6px;
+}
+.empty-state {
+  text-align: center;
+  padding: 65px 22px;
+  color: #91a0ab;
+  font-size: 14px;
+}
+.empty-state svg {
+  margin-bottom: 15px;
+  color: #8ca4b7;
+}
+.empty-state h3 {
+  color: #657c8c;
+  margin-bottom: 8px;
+}
+.empty-state p {
+  max-width: 330px;
+  margin: 0 auto;
+  font-size: 13px;
+}

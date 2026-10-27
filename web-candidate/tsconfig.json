@@ -1,0 +1,69 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": false,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": [
+        "./*"
+      ]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    ".next/dev/types/**/*.ts",
+    ".next-attachments/types/**/*.ts",
+    ".next-attachments/dev/types/**/*.ts",
+    ".next-attachments-v2/types/**/*.ts",
+    ".next-attachments-v2/dev/types/**/*.ts",
+    ".next-brand-blue-black/types/**/*.ts",
+    ".next-brand-blue-black/dev/types/**/*.ts",
+    ".next-brand-borders/types/**/*.ts",
+    ".next-brand-borders/dev/types/**/*.ts",
+    ".next-split-compose/types/**/*.ts",
+    ".next-split-compose/dev/types/**/*.ts",
+    ".next-auto-reply-cc/types/**/*.ts",
+    ".next-auto-reply-cc/dev/types/**/*.ts",
+    ".next-manual-reply-cc/types/**/*.ts",
+    ".next-manual-reply-cc/dev/types/**/*.ts",
+    ".next-classification-progress/types/**/*.ts",
+    ".next-classification-progress/dev/types/**/*.ts",
+    ".next-bold-mail-actions/types/**/*.ts",
+    ".next-bold-mail-actions/dev/types/**/*.ts",
+    ".next-onboarding/types/**/*.ts",
+    ".next-onboarding/dev/types/**/*.ts",
+    ".next-sourcing-rfq/types/**/*.ts",
+    ".next-sourcing-rfq/dev/types/**/*.ts",
+    ".next-sourcing-quota/types/**/*.ts",
+    ".next-sourcing-quota/dev/types/**/*.ts",
+    ".next-brand-icon/types/**/*.ts",
+    ".next-brand-icon/dev/types/**/*.ts",
+    ".next-review/types/**/*.ts",
+    ".next-review/dev/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

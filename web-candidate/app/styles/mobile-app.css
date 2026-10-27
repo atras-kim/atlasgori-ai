@@ -1,0 +1,21 @@
+.app-install{position:relative;flex-shrink:0}.app-install>button{border:1px solid #9db4d7;border-radius:9px;padding:8px 12px;color:#0755ed;font-weight:700;white-space:nowrap}.install-help{position:absolute;right:0;top:46px;width:min(330px,calc(100vw - 24px));padding:20px;background:white;border:1px solid #93a9c7;border-radius:14px;box-shadow:0 12px 40px #10284433;z-index:120}.install-help p{font-size:14px;line-height:1.6}.install-help small{display:block;line-height:1.6;color:#596781}.install-help button{margin-top:12px;padding:10px 18px;background:#0755ed;color:white;border-radius:8px}
+.mobile-nav-backdrop{display:none}
+@media(max-width:650px){
+ .mobile-nav-backdrop{display:block;position:fixed;inset:58px 0 0;background:#081c3b66;z-index:90}
+ .app-shell{padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom);box-sizing:border-box}
+ .topbar{min-height:58px;height:58px;gap:8px;padding:0 10px;overflow:visible;z-index:30}
+ .mobile-toggle{min-width:44px;min-height:44px}
+ .sidebar.mobile-open{top:calc(58px + env(safe-area-inset-top));bottom:env(safe-area-inset-bottom);height:auto;max-width:85vw;z-index:100}
+ .app-install>button{min-height:44px;padding:8px;font-size:12px}
+ .fx{min-width:0;flex:1}.fx small{display:none}
+ input:not([type=checkbox]):not([type=radio]),textarea,select{font-size:16px!important;max-width:100%}
+ .page-heading,.dashboard-shell .page-heading{flex-wrap:wrap;min-height:64px}.heading-actions .button{min-height:44px}
+ .reference-dashboard{padding:0 8px 8px;gap:8px;min-width:0}
+ .desk-mobile-tabs button,.desk-panel-tabs button{min-height:44px;font-size:14px}
+ .dashboard-mail-tools{flex-wrap:wrap;gap:8px}.dashboard-mail-tools .tabs{gap:14px}.dashboard-mail-tools .tabs button{min-height:44px}
+ .dashboard-mail-row{min-height:76px}.row-sender strong{font-size:15px}.row-message small{font-size:13px}
+ .desk-reader .mail-body{font-size:16px;line-height:1.8;overflow-wrap:anywhere}.desk-reader .mail-reading-content{padding:14px}
+ .desk-compose .composer-footer{flex-wrap:wrap;gap:8px}.composer-footer .button{min-height:44px}
+ .sourcing-intro{padding:16px}.sourcing-intro h2{font-size:21px}.sourcing-search{flex-wrap:wrap;gap:8px}.sourcing-search input{min-width:0;flex:1}.sourcing-search>.button{width:100%;min-height:44px}.source-card{flex-wrap:wrap;overflow-wrap:anywhere}.source-card .button{min-height:44px}
+ .section-heading{flex-wrap:wrap;gap:8px}.project-tabs{overflow-x:auto;flex-shrink:0}.project-tabs button{white-space:nowrap;min-height:44px}.login{max-width:100%;box-sizing:border-box}
+}
